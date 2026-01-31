@@ -1,16 +1,120 @@
 ---
 layout: layouts/base.njk
 ---
-<!-- Delete this block, which will also remove the component CSS from the bundle -->
-<style>{% include "css/message-box.css" %}</style>
-<div class="message-box">
-	<ol>
-		<li>Edit <code>_data/metadata.js</code> with your blog’s information.</li>
-		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
-	</ol>
-	<p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-</div>
-<!-- Stop deleting -->
 
-{{ content | safe }}
+<section class="hero-slider">
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="slide">
+        <img src="/img/hero-1.jpg" alt="Slide 1" eleventy:ignore>
+        <div class="slide-text slide-center">
+          <h1>CASA MATER</h1>
+          <p>Lorem ipsum blablablabla</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="/img/hero-2.jpg" alt="Slide 2" eleventy:ignore>
+        <div class="slide-text slide-left">
+          <h1>CASA MATER</h1>
+          <p>Lorem ipsum blablablabla</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="/img/hero-3.jpg" alt="Slide 3" eleventy:ignore>
+        <div class="slide-text slide-left">
+          <h1>CASA MATER</h1>
+          <p>Lorem ipsum blablablabla</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- setas laterais -->
+  <button class="arrow left" aria-label="Slide anterior">‹</button>
+  <button class="arrow right" aria-label="Próximo slide">›</button>
+
+  <!-- bolinhas -->
+  <div class="dots"></div>
+</section>
+
+<main>
+  {{ content | safe }}
+</main>
+
+<script>
+const track = document.querySelector('.slider-track');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dotsContainer = document.querySelector('.dots');
+const prev = document.querySelector('.arrow.left');
+const next = document.querySelector('.arrow.right');
+
+let current = 0;
+
+function updateSlider() {
+  // move o track
+  track.style.transform = `translateX(-${current * 100}%)`;
+
+  // atualiza bolinhas
+  document.querySelectorAll('.dot').forEach((d, i) => {
+    d.classList.toggle('active', i === current);
+  });
+
+  // atualiza posição do texto de cada slide
+  slides.forEach((slide, i) => {
+    const txt = slide.querySelector('.slide-text');
+    if (!txt) return;
+
+    if (i === current) {
+      txt.style.opacity = "1";
+      if (i === 0) {
+        txt.style.left = "50%";
+        txt.style.top = "50%";
+        txt.style.transform = "translate(-50%, -50%)";
+        txt.style.textAlign = "center";
+      } else {
+        txt.style.left = "2rem";
+        txt.style.top = "50%";
+        txt.style.transform = "translateY(-50%)";
+        txt.style.textAlign = "left";
+      }
+    } else {
+      txt.style.opacity = "0"; // oculta os textos dos slides inativos
+    }
+  });
+}
+
+// cria bolinhas
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.className = 'dot';
+  dot.onclick = () => {
+    current = i;
+    updateSlider();
+  };
+  dotsContainer.appendChild(dot);
+});
+
+// setas
+next.onclick = () => {
+  current = (current + 1) % slides.length;
+  updateSlider();
+};
+prev.onclick = () => {
+  current = (current - 1 + slides.length) % slides.length;
+  updateSlider();
+};
+
+// swipe mobile
+let startX = 0;
+track.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+track.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) next.click();
+  if (endX - startX > 50) prev.click();
+});
+
+// inicializa slider
+updateSlider();
+</script>
