@@ -1,31 +1,86 @@
 media: public/img
+
 content:
-  - name: posts
-    label: Posts
-    type: collection
-    path: content/blog
-    view:
-      fields: [ title, draft, date ]
-    fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: description, label: Description, type: string }
-      - { name: date, label: Date, type: date }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About page
+  # === Home ===
+  - name: home
+    label: Home
     type: file
-    path: content/about/index.md
+    path: content/home/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - name: eleventyNavigation
-        label: Navigation
-        type: object
-        fields:
+      # Slider de imagens da home
+      - name: slides
+        label: Slider
+        type: list
+        item:
+          type: object
+          fields:
+            - { name: image, label: "Imagem do slide", type: image, required: true }
+            - { name: title, label: "Título do slide", type: string }
+            - { name: subtitle, label: "Subtítulo / frase curta", type: string }
+      # Sessões da Home
+      - name: mission
+        label: Missão / Valores
+        type: rich-text
+      - name: testimonials
+        label: Testemunhos
+        type: rich-text
+      - name: contact
+        label: Contato (sessão)
+        type: rich-text
+
+  # === Quem Somos ===
+  - name: quem-somos
+    label: Quem Somos
+    type: file
+    path: content/quem-somos/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - { name: eleventyNavigation, label: Navigation, type: object, fields:
           - { name: key, label: Key, type: string }
           - { name: order, label: Order, type: number }
-      - { name: body, label: Body, type: rich-text }
+        }
+      - name: team
+        label: Equipe Casa Mater
+        type: rich-text
+      - name: partners
+        label: Nossos sócios
+        type: rich-text
+
+  # === Serviços ===
+  - name: servicos
+    label: Serviços
+    type: file
+    path: content/servicos/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - { name: eleventyNavigation, label: Navigation, type: object, fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+        }
+      - name: services
+        label: Serviços
+        type: rich-text
+      - name: upcoming_events
+        label: Próximos eventos
+        type: rich-text
+
+  # === Contato ===
+  - name: contato
+    label: Contato
+    type: file
+    path: content/contato/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - { name: eleventyNavigation, label: Navigation, type: object, fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+        }
+      - name: body
+        label: Corpo do conteúdo
+        type: rich-text
+
+  # === Metadata (site-wide) ===
   - name: metadata
     label: Metadata
     type: file
