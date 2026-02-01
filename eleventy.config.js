@@ -60,32 +60,6 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
-// eleventyConfig.addPlugin(feedPlugin, {
-// 	type: "atom", // or "rss", "json"
-// 	outputPath: "/feed/feed.xml",
-// 	stylesheet: "pretty-atom-feed.xsl",
-// 	templateData: {
-// 		eleventyNavigation: {
-// 			key: "Feed",
-// 			order: 4
-// 		}
-// 	},
-// 	collection: {
-// 		name: "posts",
-// 		limit: 10,
-// 	},
-// 	metadata: {
-// 		language: "en",
-// 		title: "Blog Title",
-// 		subtitle: "This is a longer description about your blog.",
-// 		base: "https://example.com/",
-// 		author: {
-// 			name: "Your Name"
-// 		}
-// 	}
-// });
-
-
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// Output formats for each image.
@@ -154,16 +128,4 @@ export const config = {
 		output: "_site"
 	},
 
-	// -----------------------------------------------------------------
-	// Optional items:
-	// -----------------------------------------------------------------
-
-	// If your site deploys to a subdirectory, change `pathPrefix`.
-	// Read more: https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
-
-	// When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
-	// it will transform any absolute URLs in your HTML to include this
-	// folder name and does **not** affect where things go in the output folder.
-
-	// pathPrefix: "/",
 };

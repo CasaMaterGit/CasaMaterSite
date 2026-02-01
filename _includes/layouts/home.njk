@@ -15,16 +15,12 @@ layout: layouts/base.njk
     <div class="slider-track">
       <div class="slide">
         <img src="/img/hero-1.jpg" alt="Slide 1" eleventy:ignore>
-        <div class="slide-text slide-center">
-          <h1>CASA MATER</h1>
-          <p>Lorem ipsum blablablabla</p>
-        </div>
       </div>
       <div class="slide">
         <img src="/img/hero-2.jpg" alt="Slide 2" eleventy:ignore>
         <div class="slide-text slide-left">
           <h1>CASA MATER</h1>
-          <p>Lorem ipsum blablablabla</p>
+          <p>Lorem ipsum ipsumipsumipsumipsum</p>
         </div>
       </div>
       <div class="slide">
@@ -40,12 +36,13 @@ layout: layouts/base.njk
 <!-- faixa 2 – Depoimentos -->
 <section id="depoimentos" class="home-section section-white reveal">
   <div class="container">
-    <h2 class="section-title">Depoimentos</h2>
+    <h2 class="section-title">Testimonios</h2>
 
     <div class="testimonials">
       <article class="testimonial">
         <h3>Nome do cliente</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
         </p>
       </article>
 
@@ -105,27 +102,75 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<!-- faixa 4 -->
-<section id="contato-home" class="home-section section-white reveal">
-  <div class="container">
-    <h2>Título da seção 3</h2>
-    <p>Texto da terceira faixa.</p>
+<!-- faixa 5 – Contato + Redes sociais -->
+<section id="contacto" class="home-section section-white reveal">
+  <div class="container contact-social">
+
+    <!-- Contato -->
+    <div class="contact-block">
+      <h2 class="section-title">Contato</h2>
+
+      <p class="contact-text">
+        Me encantaría escucharte. Ya sea para colaborar,
+        resolver una duda o simplemente conectar, estaré feliz de leerte.
+      </p>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <a href="mailto:contacto@casamater.com">contacto@casamater.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon">☎</span>
+          <a href="tel:+5511999999999">+55 11 99999-9999</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="social-block">
+      <h2 class="section-title">Redes sociales</h2>
+
+      <a
+        href="https://www.instagram.com/casa_mater"
+        target="_blank"
+        rel="noopener"
+        class="instagram-link"
+        aria-label="Instagram Casa Mater"
+      >
+        <img src="/img/instagram-logo.svg" alt="Instagram Casa Mater">
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- faixa 5 -->
-<section class="home-section section-magenta reveal">
+<!-- faixa – Nossos colaboradores -->
+<section id="colaboradores" class="home-section section-green reveal">
   <div class="container">
-    <h2>Título da seção 4</h2>
-    <p>Texto da quarta faixa.</p>
+    <h2 class="section-title">Nuestros colaboradores</h2>
+
+    <div class="partners-grid">
+      <div class="partner-logo">
+        <img src="/img/colab1.png" alt="Colaborador 1">
+      </div>
+      <div class="partner-logo">
+        <img src="/img/colab2.png" alt="Colaborador 2">
+      </div>
+      <div class="partner-logo">
+        <img src="/img/colab3.png" alt="Colaborador 3">
+      </div>
+      <div class="partner-logo">
+        <img src="/img/colab4.png" alt="Colaborador 4">
+      </div>
+      <div class="partner-logo">
+        <img src="/img/colab5.png" alt="Colaborador 5">
+      </div>
+    </div>
   </div>
 </section>
 
 </section>
-
-<main>
-  {{ content | safe }}
-</main>
 
 <script>
 const track = document.querySelector('.slider-track');
