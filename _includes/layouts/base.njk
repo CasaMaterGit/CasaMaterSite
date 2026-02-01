@@ -142,6 +142,72 @@
       lastScroll = currentScroll;
     });
   </script>
+  
+  <!-- Menu galery -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".gallery-track");
+    const prev = document.querySelector(".gallery-arrow.left");
+    const next = document.querySelector(".gallery-arrow.right");
+
+    let items = Array.from(document.querySelectorAll(".gallery-item"));
+
+    const visible = window.innerWidth <= 768 ? 1 : 3;
+    let index = visible;
+
+    // clona últimos
+    items.slice(-visible).forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.classList.add("clone");
+      track.prepend(clone);
+    });
+
+    // clona primeiros
+    items.slice(0, visible).forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.classList.add("clone");
+      track.appendChild(clone);
+    });
+
+    // atualiza lista após clonar
+    items = Array.from(document.querySelectorAll(".gallery-item"));
+
+    const total = items.length;
+
+    function update(animate = true) {
+      track.style.transition = animate ? "transform 0.5s ease" : "none";
+      const move = (100 / visible) * index;
+      track.style.transform = `translateX(-${move}%)`;
+    }
+
+    // posição inicial
+    update(false);
+
+    next.addEventListener("click", () => {
+      index++;
+      update();
+
+      if (index === total - visible) {
+        setTimeout(() => {
+          index = visible;
+          update(false);
+        }, 500);
+      }
+    });
+
+    prev.addEventListener("click", () => {
+      index--;
+      update();
+
+      if (index === 0) {
+        setTimeout(() => {
+          index = total - visible * 2;
+          update(false);
+        }, 500);
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>

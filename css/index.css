@@ -11,9 +11,9 @@
 	--text-color: #000000;       /* conteúdo preto */
 	
 	/* cores dos links do menu */
-	--menu-link-color: #ff00ff;          
-	--menu-link-color-active: #ff00ff;   
-	--menu-link-color-visited: #ff00ff;  
+	--menu-link-color: #a82958;          
+	--menu-link-color-active: #a82958;   
+	--menu-link-color-visited: #a82958;
 
 	--syntax-tab-size: 2;
 	}
@@ -23,10 +23,9 @@
 		--background-color: #ffffff;  /* mantém fundo branco */
 		--text-color: #000000;        /* conteúdo preto */
 		
-		/* links do menu continuam magenta */
-		--menu-link-color: #ff00ff;
-		--menu-link-color-active: #ff00ff;
-		--menu-link-color-visited: #ff00ff;
+		--menu-link-color: #a82958;
+		--menu-link-color-active: #a82958;
+		--menu-link-color-visited: #a82958;
 	}
 }
 
@@ -380,13 +379,109 @@ code {
 }
 
 .section-magenta {
-	background-color: #ff00ff; 
+	background-color: #a82958; 
 	color: #ffffff;
 }
 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+/* ===== DEPOIMENTOS ===== */
+
+.section-title {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+/* grid de depoimentos */
+.testimonials {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1.5rem;
+}
+
+/* card */
+.testimonial {
+	background: rgba(0, 0, 0, 0.03);
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+
+.testimonial h3 {
+	margin: 0 0 0.75rem 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.testimonial p {
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+	.testimonials {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.testimonials {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ===== GALERIA CARROSSEL ===== */
+
+.gallery-slider {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.gallery-viewport {
+	overflow: hidd
+	
+	en;
+	width: 100%;
+}
+
+.gallery-track {
+	display: flex;
+	width: max-content;
+	transition: transform 0.5s ease;
+}
+
+.gallery-item {
+	flex: 0 0 calc(100% / 3);
+	padding: 0.5rem;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	display: block;
+	border-radius: 6px;
+}
+
+/* mobile: 1 imagem */
+@media (max-width: 768px) {
+	.gallery-item {
+		flex: 0 0 100%;
+	}
+}
+
+/* setas */
+.gallery-arrow {
+	background: none;
+	border: none;
+	font-size: 3rem;
+	color: white;
+	cursor: pointer;
+	z-index: 5;
 }
 
 /* ===== SCROLL REVEAL ===== */
