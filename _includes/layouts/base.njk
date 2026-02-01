@@ -111,6 +111,37 @@
       reveals.forEach(el => observer.observe(el));
     });
   </script>
-  
+
+  <!-- Menu Reveal -->
+  <script>
+    const header = document.querySelector('.site-header');
+    let lastScroll = window.scrollY;
+
+    // no topo, o menu começa visível
+    header.classList.remove('is-hidden');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+
+      // se estiver no topo → sempre visível
+      if (currentScroll <= 0) {
+        header.classList.remove('is-hidden');
+        lastScroll = 0;
+        return;
+      }
+
+      // rolando para cima → esconde
+      if (currentScroll < lastScroll) {
+        header.classList.add('is-hidden');
+      } 
+      // rolando para baixo → mostra
+      else {
+        header.classList.remove('is-hidden');
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
 </body>
 </html>
