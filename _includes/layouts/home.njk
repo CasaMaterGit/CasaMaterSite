@@ -4,6 +4,14 @@ layout: layouts/base.njk
 
 <section class="hero-slider">
   <div class="slider-container">
+ 
+  <!-- setas laterais -->
+  <button class="arrow left" aria-label="Slide anterior">‹</button>
+  <button class="arrow right" aria-label="Próximo slide">›</button>
+
+  <!-- bolinhas -->
+  <div class="dots"></div>
+   
     <div class="slider-track">
       <div class="slide">
         <img src="/img/hero-1.jpg" alt="Slide 1" eleventy:ignore>
@@ -29,12 +37,38 @@ layout: layouts/base.njk
     </div>
   </div>
 
-  <!-- setas laterais -->
-  <button class="arrow left" aria-label="Slide anterior">‹</button>
-  <button class="arrow right" aria-label="Próximo slide">›</button>
+<!-- faixa 2 -->
+<section class="home-section section-white">
+  <div class="container">
+    <h2>Título da seção 1</h2>
+    <p>Texto da primeira faixa depois do slider.</p>
+  </div>
+</section>
 
-  <!-- bolinhas -->
-  <div class="dots"></div>
+<!-- faixa 3 -->
+<section class="home-section section-magenta">
+  <div class="container">
+    <h2>Título da seção 2</h2>
+    <p>Texto da segunda faixa.</p>
+  </div>
+</section>
+
+<!-- faixa 4 -->
+<section class="home-section section-white">
+  <div class="container">
+    <h2>Título da seção 3</h2>
+    <p>Texto da terceira faixa.</p>
+  </div>
+</section>
+
+<!-- faixa 5 -->
+<section class="home-section section-magenta">
+  <div class="container">
+    <h2>Título da seção 4</h2>
+    <p>Texto da quarta faixa.</p>
+  </div>
+</section>
+
 </section>
 
 <main>

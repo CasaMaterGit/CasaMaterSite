@@ -246,6 +246,7 @@ header {
 	position: relative;
 	width: 100%;
 	margin: 2rem 0;
+	overflow: hidden; 
 }
 
 .slider-container {
@@ -256,15 +257,17 @@ header {
 .slider-track {
 	display: flex;
 	transition: transform 0.5s ease;
+	will-change: transform;
 }
 
 .slide {
-	min-width: 100%; /* ocupa toda a tela lateralmente */
+	min-width: 100%; 
 	height: 70vh; /* altura maior */
 	flex-shrink: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .slide img {
@@ -343,4 +346,26 @@ header {
 	margin: 0;
 }
 
+/* ===== HOME SECTIONS (faixas abaixo do slider) ===== */
+
+.home-section {
+	width: 100%;
+	padding: 6rem 1.5rem;
+}
+
+.section-white {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.section-magenta {
+	background-color: #ff00ff; 
+	color: #ffffff;
+}
+
+/* container interno */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
