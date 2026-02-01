@@ -1,13 +1,7 @@
 ---
-title: Servicios
 layout: layouts/base.njk
 eleventyNavigation:
   key: Servicios
   order: 3
+services: Teste pagecms
 ---
-
-## <span id="servicos"></span>Serviços
-Lista de serviços…
-
-## <span id="eventos"></span>Próximos eventos
-Eventos futuros…
