@@ -1,11 +1,13 @@
 ---
-title: Serviços
+title: Servicios
 layout: layouts/base.njk
 eleventyNavigation:
-  key: Serviços
+  key: Servicios
   order: 3
 ---
 
-## Serviços
+## <span id="servicos"></span>Serviços
+Lista de serviços…
 
-Descreva seus serviços aqui.
+## <span id="eventos"></span>Próximos eventos
+Eventos futuros…

@@ -19,15 +19,35 @@
 
   <!-- Header / Menu -->
   <header class="site-header">
-    <a href="/" class="site-logo">Home</a>
-
+    <a href="/" class="site-logo">LOGO</a>
     <nav>
       <ul class="nav">
         {%- for item in collections.all | eleventyNavigation %}
-          <li class="nav-item">
-            <a href="{{ item.url }}" {% if item.url == page.url %}aria-current="page"{% endif %}>
-              {{ item.title }}
-            </a>
+          <li class="nav-item {% if item.children %}has-children{% endif %}">
+            <div class="nav-link-wrapper">
+              <a href="{{ item.url }}"
+                {% if item.url == page.url %}aria-current="page"{% endif %}>
+                {{ item.title }}
+              </a>
+
+              {% if item.children %}
+                <button class="submenu-toggle" aria-label="Abrir submenu">
+                  ▾
+                </button>
+              {% endif %}
+            </div>
+
+            {% if item.children %}
+              <ul class="subnav">
+                {% for child in item.children %}
+                  <li>
+                    <a href="{{ item.url }}#{{ child.key | slugify }}">
+                      {{ child.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </li>
         {%- endfor %}
       </ul>
@@ -48,5 +68,38 @@
 
   <!-- JS Bundle -->
   <script type="module" src="{% getBundleFileUrl "js" %}"></script>
+
+  <!-- Scroll Reveal -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const reveals = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+  <script>
+  document.querySelectorAll('.submenu-toggle').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const item = btn.closest('.nav-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
 </body>
 </html>
