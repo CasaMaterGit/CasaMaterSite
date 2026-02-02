@@ -7,6 +7,33 @@ eleventyNavigation:
 
 <div class="about-split">
 
+  <!-- Foto à esquerda -->
+  <div class="about-image">
+    <img src="/img/juliana-alves.jpg" alt="Juliana Alves" eleventy:ignore>
+  </div>
+
+  <!-- Texto à direita -->
+  <div class="about-text">
+    <h1 class="page-title">Juliana Alves</h1>
+
+    <p class="lead">
+Acompaño a mujeres para que vivan el embarazo, el parto y el posparto
+desde la calma, la confianza y el respeto.
+Soy Juliana Alves, enfermera con más de 15 años de experiencia en la
+sanidad pública, especializada en el cuidado posnatal y en el
+acompañamiento consciente de la maternidad.
+Creo profundamente en la capacidad de las mujeres para parir, maternar
+y sostener la vida cuando cuentan con información, apoyo y un entorno
+libre de violencia y juicios. Mi trabajo une la experiencia clínica con una
+mirada social y feminista, ofreciendo acompañamiento en español y
+portugués. Este es un espacio para volver al cuerpo, a los ritmos propios y a la
+certeza de que no estás sola.   </p>
+  </div>
+
+</div>
+
+<div class="about-split">
+
   <div class="about-text">
 
     <h1 class="page-title">Conoce nuestra historia</h1>
@@ -41,3 +68,4 @@ eleventyNavigation:
     <img src="/img/quem-somos.jpg" alt="Casa mater" eleventy:ignore>
   </div>
 </div>
+

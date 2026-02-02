@@ -430,6 +430,44 @@ code {
 	}
 }
 
+/* ===== NUESTRA VISIÓN ===== */
+
+.section-vision .vision-panel {
+	background-image: url("/img/nuestra-vision.jpg"); /* sua imagem de fundo */
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	border-radius: 12px;
+	min-height: 400px; /* altura do painel */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 1.5rem;
+}
+
+.section-vision .vision-overlay {
+	background: rgba(255, 255, 255, 0.8); /* overlay para legibilidade */
+	padding: 2rem;
+	max-width: 800px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.section-vision .vision-overlay .section-title {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: #b44388; /* mesma cor magenta do site */
+}
+
+.section-vision .vision-overlay .vision-text {
+	font-family: var(--font-family);
+	font-size: 1.1rem;
+	line-height: 1.7;
+	text-align: justify;
+	color: #000000;
+}
+
+
 /* ===== GALERIA CARROSSEL ===== */
 
 .gallery-slider {
@@ -540,7 +578,7 @@ code {
 	color: #b44388;
 }
 
-/* ===== REDES SOCIAIS (REFINADO) ===== */
+/* ===== REDES SOCIAIS ===== */
 
 .social-block {
 	display: flex;
