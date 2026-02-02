@@ -11,9 +11,9 @@
 	--text-color: #000000;       /* conteúdo preto */
 	
 	/* cores dos links do menu */
-	--menu-link-color: #a82958;          
-	--menu-link-color-active: #a82958;   
-	--menu-link-color-visited: #a82958;
+	--menu-link-color: #b44388;          
+	--menu-link-color-active: #b44388;   
+	--menu-link-color-visited: #b44388;
 
 	--syntax-tab-size: 2;
 	}
@@ -23,9 +23,9 @@
 		--background-color: #ffffff;  /* mantém fundo branco */
 		--text-color: #000000;        /* conteúdo preto */
 		
-		--menu-link-color: #a82958;
-		--menu-link-color-active: #a82958;
-		--menu-link-color-visited: #a82958;
+		--menu-link-color: #b44388;
+		--menu-link-color-active: #b44388;
+		--menu-link-color-visited: #b44388;
 	}
 }
 
@@ -200,7 +200,7 @@ code {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 2rem;
-	background: rgba(255, 255, 255, 0.45); /* transparência */
+	background: rgba(231, 214, 196, 0.45); /* transparência */
 	backdrop-filter: blur(8px); /* efeito vidro */
 	-webkit-backdrop-filter: blur(8px);
 	z-index: 100;
@@ -374,13 +374,13 @@ code {
 }
 
 .section-magenta {
-	background-color: #a82958; 
+	background-color: #b44388; 
 	color: #ffffff;
 }
 
 .section-green {
-	background-color: #7aa78c;
-	color: #000000;
+	background-color: #455e3e;
+	color: white;
 }
 
 .container {
@@ -404,7 +404,8 @@ code {
 
 /* card */
 .testimonial {
-	background: #7aa78c;
+	background: #455e3e;
+	color: white;
 	padding: 1.5rem;
 	border-radius: 8px;
 }
