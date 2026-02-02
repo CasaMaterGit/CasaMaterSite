@@ -486,8 +486,92 @@ code {
 .gallery-arrow.left { left: 0; }
 .gallery-arrow.right { right: 0; }
 
-/* ===== CONTATO + REDES SOCIAIS ===== */
+/* ===== BLOCO CONTATO COM IMAGEM ===== */
 
+.contact-card {
+	background-image: url("/img/contacto.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+	min-height: 320px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* overlay para legibilidade */
+.contact-overlay {
+	background: #455e3e;
+	padding: 2.5rem;
+	width: 100%;
+}
+
+.contact-text {
+	text-align: justify;
+	line-height: 1.7;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	margin-bottom: 1.5rem;
+}
+
+/* email */
+.contact-item {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 1.1rem;
+}
+
+.contact-icon {
+	font-size: 1.2rem;
+	color: #b44388;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* remove sublinhado e mantém identidade */
+.contact-link {
+	text-decoration: none;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	font-weight: 500;
+}
+
+.contact-link:hover {
+	color: #b44388;
+}
+
+/* ===== REDES SOCIAIS (REFINADO) ===== */
+
+.social-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.social-block .section-title {
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 0.75rem;
+	color: var(--text-color);
+}
+
+/* força tamanho correto do ícone do Instagram */
+.instagram-icon {
+	max-width: 19px !important;
+	display: block;
+}
+
+.instagram-link:hover img {
+	transform: scale(1.15);
+	opacity: 1;
+}
+
+/* ===== GRID ===== */
 .contact-social {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -495,26 +579,14 @@ code {
 	align-items: center;
 }
 
-.social-block {
-	text-align: center;
-}
-
-.instagram-link img {
-	width: 120px;
-	max-width: 100%;
-	transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.instagram-link:hover img {
-	transform: scale(1.05);
-	opacity: 0.85;
-}
-
 /* mobile */
 @media (max-width: 768px) {
 	.contact-social {
 		grid-template-columns: 1fr;
-		gap: 3rem;
+	}
+
+	.contact-card {
+		min-height: auto;
 	}
 }
 
