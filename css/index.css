@@ -2,10 +2,7 @@
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-}
 
-/* Theme colors */
-:root {
   /* cores gerais */
 	--background-color: #ffffff; /* fundo branco */
 	--text-color: #000000;       /* conteúdo preto */
@@ -200,7 +197,7 @@ code {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 2rem;
-	background: rgba(231, 214, 196, 0.45); /* transparência */
+	background: rgba(231, 214, 196, 0.35); /* transparência */
 	backdrop-filter: blur(8px); /* efeito vidro */
 	-webkit-backdrop-filter: blur(8px);
 	z-index: 100;
