@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
-title: Contato
+title: CONTACTO
 eleventyNavigation:
   key: Contato
   order: 4
 ---
-Formulário, endereço e telefone yesssss
+teste 2
