@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+title: Contato
 eleventyNavigation:
   key: Contato
   order: 4
