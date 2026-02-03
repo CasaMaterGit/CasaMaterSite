@@ -4,8 +4,8 @@
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 
   /* cores gerais */
-	--background-color: #ffffff; /* fundo branco */
-	--text-color: #000000;       /* conteúdo preto */
+	--background-color: #ffffff; 
+	--text-color: #000000;       
 	
 	/* cores dos links do menu */
 	--menu-link-color: #b44388;          
@@ -17,8 +17,8 @@
 
 	@media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: #ffffff;  /* mantém fundo branco */
-		--text-color: #000000;        /* conteúdo preto */
+		--background-color: #ffffff;  
+		--text-color: #000000;        
 		
 		--menu-link-color: #b44388;
 		--menu-link-color-active: #b44388;
@@ -130,12 +130,10 @@ header {
 	border-radius: 2px;
 }
 
-/* Prevent visually-hidden skip link fom pushing content around when focused */
 #skip-link.visually-hidden:focus {
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
-	/* Ensure it is positioned on top of everything else when it is shown */
 	z-index: 999;
 }
 
@@ -204,7 +202,6 @@ code {
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* começa escondido */
 .site-header.is-hidden {
 	transform: translateY(-100%);
 	opacity: 0;
@@ -220,7 +217,9 @@ code {
 /* menu */
 .nav {
 	display: flex;
-	gap: 1.5rem;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 
@@ -229,14 +228,6 @@ code {
 	font-weight: 500;
 }
 
-/* Nav */
-.nav {
-	display: flex;
-	gap: .5em 1em;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
 .nav-item {
 	display: inline-block;
 }
@@ -296,10 +287,10 @@ code {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background: none;       /* sem fundo branco */
-	border: none;           /* sem borda */
-	color: white;           /* seta branca */
-	font-size: 3rem;        /* maior */
+	background: none;       
+	border: none;          
+	color: white;           
+	font-size: 3rem;        
 	font-weight: bold;
 	cursor: pointer;
 	z-index: 10;
@@ -433,12 +424,12 @@ code {
 /* ===== NUESTRA VISIÓN ===== */
 
 .section-vision .vision-panel {
-	background-image: url("/img/nuestra-vision.jpg"); /* sua imagem de fundo */
+	background-image: url("/img/nuestra-vision.jpg");
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	border-radius: 12px;
-	min-height: 400px; /* altura do painel */
+	min-height: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -446,7 +437,7 @@ code {
 }
 
 .section-vision .vision-overlay {
-	background: rgba(255, 255, 255, 0.8); /* overlay para legibilidade */
+	background: rgba(255, 255, 255, 0.55);
 	padding: 2rem;
 	max-width: 800px;
 	border-radius: 8px;
@@ -456,7 +447,7 @@ code {
 .section-vision .vision-overlay .section-title {
 	font-size: 2rem;
 	margin-bottom: 1rem;
-	color: #b44388; /* mesma cor magenta do site */
+	color: #455e3e;
 }
 
 .section-vision .vision-overlay .vision-text {
@@ -466,7 +457,6 @@ code {
 	text-align: justify;
 	color: #000000;
 }
-
 
 /* ===== GALERIA CARROSSEL ===== */
 
@@ -485,8 +475,8 @@ code {
 }
 
 .gallery-item {
-	flex: 0 0 auto;         /* não encolhe, nem cresce */
-	width: 33%;             /* 3 fotos visíveis no desktop */
+	flex: 0 0 auto;         
+	width: 33%;             
 }
 
 .gallery-item img {
@@ -521,7 +511,7 @@ code {
 .gallery-arrow.left { left: 0; }
 .gallery-arrow.right { right: 0; }
 
-/* ===== BLOCO CONTATO COM IMAGEM ===== */
+/* ===== BLOCO CONTATO ===== */
 
 .contact-card {
 	background-image: url("/img/contacto.jpg");
@@ -566,7 +556,6 @@ code {
 	justify-content: center;
 }
 
-/* remove sublinhado e mantém identidade */
 .contact-link {
 	text-decoration: none;
 	font-family: var(--font-family);
@@ -595,7 +584,6 @@ code {
 	color: var(--text-color);
 }
 
-/* força tamanho correto do ícone do Instagram */
 .instagram-icon {
 	max-width: 19px !important;
 	display: block;
@@ -683,6 +671,6 @@ main p {
 	}
 
 	.about-image {
-		order: -1; /* imagem sobe no mobile */
+		order: -1;
 	}
 }

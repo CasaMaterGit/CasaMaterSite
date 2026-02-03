@@ -37,8 +37,7 @@
 
   <!-- Main Content -->
   <main id="main">
-    <heading-anchors>
-
+    
       {# HOME: slides e seções opcionais #}
       {% if slides %}
         <section class="hero-slider reveal">
@@ -81,11 +80,10 @@
             {% endif %}
 
             {{ content | safe }}
-    </div>
-  </section>
+          </div>
+        </section>
       {% endif %}
 
-    </heading-anchors>
   </main>
 
   <!-- Footer -->
