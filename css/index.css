@@ -650,18 +650,22 @@ body.quienes-somos .about-image img {
 	object-fit: contain;
 }
 
-/* ===== RESET PARA O GRID DE SERVICIOS ===== */
-.home-section.services-section {
-	display: block; 
-	padding: 6rem 1.5rem; 
+/* ===== GRID DE SERVICIOS ===== */
+
+body.nuestros-servicios-y-actividades .page-title {
+	margin-top: 6rem;
+	color: #455e3e;
 }
 
-/* ===== GRID DE SERVICIOS ===== */
 .services-grid {
-	display: grid !important; /* força grid mesmo se houver outro display herdado */
-	grid-template-columns: repeat(2, 1fr); /* 2 colunas no desktop */
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
-	justify-items: stretch; /* força os cards preencherem a coluna */
+	justify-content: start;
+	align-content: start;
+	direction: ltr;
+	text-align: left;
+	grid-auto-flow: row;
 }
 
 /* mobile: 1 coluna */

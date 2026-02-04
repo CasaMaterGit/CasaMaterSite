@@ -14,6 +14,7 @@
   <!-- Optional JS -->
   <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 </head>
+
 <body class="{{ title | slug }}">
 
   <!-- Skip link -->
@@ -91,17 +92,24 @@
 
       {# PÁGINAS GERAIS: Contato, Quem Somos, etc #}
       {% if content %}
-        <section class="home-section reveal">
-          <div class="content">
 
-            {% if title %}
-              <h1 class="page-title">{{ title }}</h1>
-            {% endif %}
+        {% if title == "Nuestros Servicios y Actividades" %}
+          {{ content | safe }}
+        {% else %}
+          <section class="home-section reveal">
+            <div class="content">
 
-            {{ content | safe }}
-          </div>
-        </section>
+              {% if title %}
+                <h1 class="page-title">{{ title }}</h1>
+              {% endif %}
+
+              {{ content | safe }}
+            </div>
+          </section>
+        {% endif %}
+
       {% endif %}
+
   </main>
 
   <!-- Footer -->
