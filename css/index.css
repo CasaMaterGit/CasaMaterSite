@@ -612,171 +612,63 @@ code {
 	}
 }
 
-/* ===== PÁGINAS DE CONTEÚDO (Quem Somos etc) ===== */
+/* ===== PÁGINA QUIÉNES SOMOS ===== */
 
-.page-title {
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-	font-weight: 700;
-	color:#455e3e
-}
-
-.home-section p,
-.page-content p,
-main p {
-	text-align: justify;
-	line-height: 1.7;
-	margin-bottom: 1.2rem;
-	font-family: var(--font-family);
-	color: black
-}
-
-/* primeiro parágrafo com mais presença */
-.lead {
-	font-size: 1.1rem;
-}
-
-/* destaque da marca */
-.brand-highlight {
-	color: var(--menu-link-color); 
-	font-weight: 700;
-}
-
-.about-split {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 3rem;
-	align-items: center;
-}
-
-/* texto */
-.about-text p {
-	text-align: justify;
-	line-height: 1.7;
-}
-
-/* imagem */
-/* container da imagem */
-.about-image {
-	width: 100%;
-	/* altura automática, não corta a imagem */
-	height: auto;
-	max-height: 500px; /* opcional: define altura máxima */
+body.quienes-somos .about-section,
+body.quienes-somos .about-split,
+body.quienes-somos .about-image,
+body.quienes-somos .about-text {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-/* imagem em si */
-.about-image img {
-	width: 100%;       /* preenche horizontalmente */
-	height: auto;      /* mantém proporção original */
-	border-radius: 12px;
-	object-fit: contain; /* não corta, mostra toda a imagem */
-}
-
-
-.reveal-img,
-.reveal-text {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.is-visible .reveal-img {
-	opacity: 1;
-	transform: translateY(0);
-	transition-delay: 0.1s;
-}
-
-.is-visible .reveal-text {
-	opacity: 1;
-	transform: translateY(0);
-	transition-delay: 0.35s;
-}
-
-.about-section {
-	padding: 6rem 1.5rem;
-}
-
-.section-light {
-	background-color: #ffffff;
-}
-
-.section-green-soft {
-	background-color: #f3f6f2;
-}
-
-/* ===== SOBRE NÓS - LAYOUT LADO A LADO ===== */
-
-.about-split {
-	display: flex;               /* Flex para alinhar horizontalmente */
-	align-items: center;         /* Centraliza verticalmente */
+	flex-wrap: wrap;
 	gap: 3rem;
 	margin-bottom: 4rem;
 }
 
-/* Inverte a ordem do segundo bloco */
-.about-split.reverse {
+body.quienes-somos .about-split {
+	align-items: center;
+}
+
+body.quienes-somos .about-split.reverse {
 	flex-direction: row-reverse;
 }
 
-/* Texto */
-.about-text {
-	flex: 1;                     /* Ocupa metade do espaço */
+body.quienes-somos .about-text {
+	flex: 1;
 }
 
-/* Imagem */
-.about-image {
-	flex: 1;                     /* Ocupa metade do espaço */
+body.quienes-somos .about-image {
+	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.about-image img {
-	width: 100%;                 /* Preenche o container */
-	height: auto;                /* Mantém proporção */
-	border-radius: 8px;
-	object-fit: contain;         /* Não corta a imagem */
+body.quienes-somos .about-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	object-fit: contain;
 }
 
-/* Animação de aparição */
-.reveal-img, .reveal-text {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity 0.8s ease, transform 0.8s ease;
+/* ===== RESET PARA O GRID DE SERVICIOS ===== */
+.home-section.services-section {
+	display: block; 
+	padding: 6rem 1.5rem; 
 }
 
-.reveal-img.is-visible,
-.reveal-text.is-visible {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-	.about-split,
-	.about-split.reverse {
-		flex-direction: column;
-	}
-	
-	.about-image {
-		order: -1; /* Imagem sobe acima do texto */
-		width: 100%;
-	}
-
-	.about-text {
-		width: 100%;
-	}
-}
-
-/* ===== SERVICIOS GRID ===== */
-
+/* ===== GRID DE SERVICIOS ===== */
 .services-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	display: grid !important; /* força grid mesmo se houver outro display herdado */
+	grid-template-columns: repeat(2, 1fr); /* 2 colunas no desktop */
 	gap: 2rem;
+	justify-items: stretch; /* força os cards preencherem a coluna */
+}
+
+/* mobile: 1 coluna */
+@media (max-width: 768px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .service-card {
@@ -794,22 +686,38 @@ main p {
 	display: block;
 }
 
+/* FAIXA DE TEXTO na IMAGEM */
 .service-card span {
 	position: absolute;
-	inset: 0;
+	left: 0;                 
+	right: 0;                
+	bottom: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(69, 94, 62, 0.65);
-	color: white;
+	background: rgba(231, 214, 196, 0.50);
+	color: #b44388;
 	font-size: 1.2rem;
 	font-weight: 600;
+	padding: 0.5rem 0;       
 	text-align: center;
+	border-radius: 0 0 12px 12px; 
 	transition: background 0.3s ease;
 }
 
 .service-card:hover span {
-	background: rgba(69, 94, 62, 0.8);
+	background: #ffffff;
+}
+
+/* Mobile: 1 coluna */
+@media (max-width: 768px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.service-card span {
+		max-width: 90%;
+	}
 }
 
 /*=========SUBMENU================*/
