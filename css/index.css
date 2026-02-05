@@ -205,7 +205,7 @@ code {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 2rem;
-	background: rgba(231, 214, 196, 0.35); /* transparência */
+	background: rgba(231, 214, 196, 0.2); /* transparência */
 	backdrop-filter: blur(8px); /* efeito vidro */
 	-webkit-backdrop-filter: blur(8px);
 	z-index: 100;
@@ -639,6 +639,10 @@ body.quienes-somos .home-section {
 	padding-bottom: 4rem;
 }
 
+body.quienes-somos > main > section .page-title:first-of-type {
+	display: none;
+}
+
 body.quienes-somos .about-quote {
 	max-width: 100%;
 	margin: 2rem auto 4rem;
@@ -649,7 +653,8 @@ body.quienes-somos .about-quote {
 
 body.quienes-somos .about-quote p {
 	margin: 0;
-	font-size: 2rem;
+	font-size: 3rem;
+	font-style: italic;
 	line-height: 1.6;
 	font-family: var(--font-family);
 }
@@ -665,8 +670,8 @@ body.quienes-somos .quote-green {
 }
 
 body.quienes-somos .brand-highlight {
-	color: rgba(0,0,0, 0.9);
-	font-weight: 600;
+	color: white;
+	font-weight: 700;
 	white-space: nowrap;
 }
 
