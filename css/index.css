@@ -639,10 +639,6 @@ body.quienes-somos .home-section {
 	padding-bottom: 4rem;
 }
 
-body.quienes-somos > main > section .page-title:first-of-type {
-	display: none;
-}
-
 body.quienes-somos .about-quote {
 	max-width: 100%;
 	margin: 2rem auto 4rem;
@@ -708,14 +704,11 @@ body.quienes-somos .about-text .page-title {
 	position: absolute;
 	top: -2.2rem;               
 	left: 2.5rem;
-
 	background: #ffffff;       
 	padding: 0.4rem 1.2rem;
-
 	color: #455e3e;
 	font-size: 1.8rem;
 	font-weight: 700;
-
 	border-radius: 999px;         
 	box-shadow: 0 0px 12px rgba(0,0,0, 0.5);
 	z-index: 2;
@@ -725,9 +718,9 @@ body.quienes-somos .about-text .page-title {
 body.quienes-somos .about-text h1,
 body.quienes-somos .about-text h2,
 body.quienes-somos .page-title {
-	color: #455e3e;
+	color: RGBA(255,255,255,0.1);
 	font-weight: 700;
-	margin-bottom: 1.2rem;
+	margin-bottom: 0.1rem;
 }
 
 /* parágrafo principal */

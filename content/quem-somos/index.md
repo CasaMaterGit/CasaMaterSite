@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Quiénes Somos
+hideTitle: true
 eleventyNavigation:
   key: Quiénes Somos
   order: 2
