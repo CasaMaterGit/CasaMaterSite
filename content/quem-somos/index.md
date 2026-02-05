@@ -17,7 +17,7 @@ eleventyNavigation:
 
 <div class="about-split">
   <div class="about-image reveal-img">
-    <img src="/img/juliana-alves.jpg" alt="Juliana Alves" eleventy:ignore>
+    <img src="/img/juliana-alvesBg.jpeg" alt="Juliana Alves" eleventy:ignore>
   </div>
 
   <div class="about-text reveal-text">

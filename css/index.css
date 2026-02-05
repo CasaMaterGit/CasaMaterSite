@@ -459,17 +459,6 @@ code {
 	line-height: 1.5;
 }
 
-@media (max-width: 1024px) {
-	.testimonials {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-@media (max-width: 768px) {
-	.testimonials {
-		grid-template-columns: 1fr;
-	}
-}
 
 /* ===== HOME: NUESTRA VISIÓN ===== */
 
@@ -535,13 +524,6 @@ code {
 	height: 250px;          
 	object-fit: cover;      
 	border-radius: 6px;
-}
-
-/* mobile: 1 imagem por vez */
-@media (max-width: 768px) {
-	.gallery-item {
-		width: 100%;
-	}
 }
 
 /* setas */
@@ -650,17 +632,6 @@ code {
 	align-items: center;
 }
 
-/* mobile */
-@media (max-width: 768px) {
-	.contact-social {
-		grid-template-columns: 1fr;
-	}
-
-	.contact-card {
-		min-height: auto;
-	}
-}
-
 /* ===== PÁGINA QUIÉNES SOMOS ===== */
 
 body.quienes-somos .home-section {
@@ -693,16 +664,8 @@ body.quienes-somos .quote-green {
 	font-weight: 600;
 }
 
-/* mobile */
-@media (max-width: 768px) {
-	body.quienes-somos .about-quote p {
-		font-size: 1.05rem;
-		padding: 0 1rem;
-	}
-}
-
 body.quienes-somos .brand-highlight {
-	color: #b44388;
+	color: rgba(0,0,0, 0.9);
 	font-weight: 600;
 	white-space: nowrap;
 }
@@ -710,7 +673,7 @@ body.quienes-somos .brand-highlight {
 body.quienes-somos .about-split {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
+	gap: 1rem;
 	align-items: center;
 	margin-bottom: 5rem;
 }
@@ -727,9 +690,30 @@ body.quienes-somos .about-split.reverse > * {
 
 body.quienes-somos .about-text {
 	font-family: var(--font-family);
-	color: #000;
-	line-height: 1.7;
+	background-color: #b44388;    
+	color: #ffffff;               
+	line-height: 1.8;
 	text-align: justify;
+	padding: 3rem 3rem;         
+	border-radius: 16px;
+	font-size: 1.30rem;         
+}
+
+body.quienes-somos .about-text .page-title {
+	position: absolute;
+	top: -2.2rem;               
+	left: 2.5rem;
+
+	background: #ffffff;       
+	padding: 0.4rem 1.2rem;
+
+	color: #455e3e;
+	font-size: 1.8rem;
+	font-weight: 700;
+
+	border-radius: 999px;         
+	box-shadow: 0 0px 12px rgba(0,0,0, 0.5);
+	z-index: 2;
 }
 
 /* títulos */
@@ -758,7 +742,7 @@ body.quienes-somos .about-image img {
 	width: 100%;
 	height: auto;
 	object-fit: contain;   
-	border-radius: 12px;
+	border-radius: 0px;
 }
 
 /* scroll */
@@ -779,19 +763,6 @@ body.quienes-somos .reveal-text.is-visible {
 	transform: translateY(0);
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-	body.quienes-somos .about-split,
-	body.quienes-somos .about-split.reverse {
-		grid-template-columns: 1fr;
-		gap: 2.5rem;
-	}
-
-	body.quienes-somos .about-image img {
-		max-width: 100%;
-	}
-}
-
 /* ===== SERVICIOS ===== */
 
 body.nuestros-servicios-y-actividades .page-title {
@@ -808,13 +779,6 @@ body.nuestros-servicios-y-actividades .page-title {
 	direction: ltr;
 	text-align: left;
 	grid-auto-flow: row;
-}
-
-/* mobile: 1 coluna */
-@media (max-width: 768px) {
-	.services-grid {
-		grid-template-columns: 1fr;
-	}
 }
 
 .service-card {
@@ -854,7 +818,61 @@ body.nuestros-servicios-y-actividades .page-title {
 	background: #ffffff;
 }
 
-/* Mobile: 1 coluna */
+
+/*====VERSION MOBILE===*/
+
+/* home testimonials */
+@media (max-width: 1024px) {
+	.testimonials {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.testimonials {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* home galeria */
+@media (max-width: 768px) {
+	.gallery-item {
+		width: 100%;
+	}
+}
+
+/* quem somos */
+@media (max-width: 768px) {
+	body.quienes-somos .about-text {
+		padding-top: 3rem;
+	}
+
+	body.quienes-somos .about-text .page-title {
+		left: 1.5rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	body.quienes-somos .about-quote p {
+		font-size: 1.05rem;
+		padding: 0 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	body.quienes-somos .about-split,
+	body.quienes-somos .about-split.reverse {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	body.quienes-somos .about-image img {
+		max-width: 100%;
+	}
+}
+
+/* servicios */
 @media (max-width: 768px) {
 	.services-grid {
 		grid-template-columns: 1fr;
@@ -862,5 +880,16 @@ body.nuestros-servicios-y-actividades .page-title {
 
 	.service-card span {
 		max-width: 90%;
+	}
+}
+
+/* home contato */
+@media (max-width: 768px) {
+	.contact-social {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-card {
+		min-height: auto;
 	}
 }
