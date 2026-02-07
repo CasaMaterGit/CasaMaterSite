@@ -459,7 +459,6 @@ code {
 	line-height: 1.5;
 }
 
-
 /* ===== HOME: NUESTRA VISIÓN ===== */
 
 .section-vision .vision-panel {
@@ -495,6 +494,73 @@ code {
 	line-height: 1.7;
 	text-align: justify;
 	color: #000000;
+}
+
+/* ===== HOME: ATUACIÓN ===== */
+body .actuacion-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin-top: 3rem;
+	text-align: center;
+	align-items: flex-start;
+}
+
+body .actuacion-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+body .actuacion-item h3 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin: 0.5rem 0;
+	color: #455e3e; /* cor dos títulos */
+}
+
+body .actuacion-item p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #333;
+}
+
+body .icon-circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #b44388; /* cor do círculo */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+body .icon-circle img {
+	width: 50%;
+	height: 50%;
+	object-fit: contain;
+}
+
+body .actuacion-button {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+body .actuacion-button .btn-primary {
+	display: inline-block;
+	background-color: #b44388;
+	color: #fff;
+	padding: 0.8rem 2rem;
+	font-weight: 600;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+body .actuacion-button .btn-primary:hover {
+	background-color: #9c3570;
 }
 
 /* ===== HOME: GALERIA CARROSSEL ===== */
@@ -854,11 +920,9 @@ body.nuestros-servicios-y-actividades .page-title {
 	background: #ffffff;
 }
 
-
 /*====VERSION MOBILE===*/
 
-/* =========================
-MOBILE GLOBAL (ALL PAGES) */
+/* MOBILE GLOBAL (ALL PAGES) */
 @media (max-width: 768px) {
 
 	html, body {
@@ -898,9 +962,7 @@ MOBILE GLOBAL (ALL PAGES) */
 	}
 }
 
-/* =========================
-   HOME – MOBILE
-========================= */
+/* ====HOME – MOBILE ====== */
 @media (max-width: 768px) {
 
 	/* slider */
@@ -945,9 +1007,25 @@ MOBILE GLOBAL (ALL PAGES) */
 		height: 220px;
 	}
 }
-/* =========================
-   QUIÉNES SOMOS – MOBILE
-========================= */
+
+@media (max-width: 768px) {
+	body .actuacion-grid {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+
+	body .icon-circle {
+		width: 70px;
+		height: 70px;
+	}
+
+	body .icon-circle img {
+		width: 50%;
+		height: 50%;
+	}
+}
+
+/* ===== QUIÉNES SOMOS – MOBILE ====== */
 @media (max-width: 768px) {
 
 	body.quienes-somos .about-quote p {
@@ -977,9 +1055,7 @@ MOBILE GLOBAL (ALL PAGES) */
 	}
 }
 
-/* =========================
-   SERVICIOS – MOBILE
-========================= */
+/* ====== SERVICIOS – MOBILE ======== */
 @media (max-width: 768px) {
 
 	.services-grid {
@@ -997,9 +1073,7 @@ MOBILE GLOBAL (ALL PAGES) */
 	}
 }
 
-/* =========================
-   CONTATO – MOBILE
-========================= */
+/* ======= CONTATO – MOBILE ========= */
 @media (max-width: 768px) {
 
 	.contact-social {
