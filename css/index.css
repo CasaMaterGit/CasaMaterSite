@@ -673,20 +673,18 @@ body.quienes-somos .brand-highlight {
 
 body.quienes-somos .about-split {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	grid-template-columns: 0.5fr 0.6fr;
+	gap: 0.2rem;
 	align-items: center;
-	margin-bottom: 5rem;
+	margin-bottom: 6rem;
 }
 
-/* versão invertida */
 body.quienes-somos .about-split.reverse {
-	grid-template-columns: 1fr 1fr;
-	direction: rtl;
-}
-
-body.quienes-somos .about-split.reverse > * {
-	direction: ltr;
+	display: flex;
+	flex-direction: column;    
+	gap: 1rem;
+	margin: 0 auto 5rem;
+	padding: 0 2rem;
 }
 
 body.quienes-somos .about-text {
@@ -700,6 +698,19 @@ body.quienes-somos .about-text {
 	font-size: 1.30rem;         
 }
 
+body.quienes-somos .about-split.reverse .about-text {
+	background-color: #455e3e;  
+	order: 1;
+	color: #ffffff;
+	width: calc(100% - 2rem); 
+	padding: 4rem;
+	border-radius: 20px;
+	font-size: 1.35rem;
+	line-height: 1.9;
+	position: relative;
+	margin-left: 4.5rem; 
+}
+
 body.quienes-somos .about-text .page-title {
 	position: absolute;
 	top: -2.2rem;               
@@ -707,6 +718,20 @@ body.quienes-somos .about-text .page-title {
 	background: #ffffff;       
 	padding: 0.4rem 1.2rem;
 	color: #455e3e;
+	font-size: 1.8rem;
+	font-weight: 700;
+	border-radius: 999px;         
+	box-shadow: 0 0px 12px rgba(0,0,0, 0.5);
+	z-index: 2;
+}
+
+body.quienes-somos .about-split.reverse .page-title {
+	position: absolute;
+	top: -2.2rem;               
+	left: 2.5rem;
+	background: #ffffff;       
+	padding: 0.4rem 1.2rem;
+	color: #b44388;
 	font-size: 1.8rem;
 	font-weight: 700;
 	border-radius: 999px;         
@@ -741,6 +766,19 @@ body.quienes-somos .about-image img {
 	height: auto;
 	object-fit: contain;   
 	border-radius: 0px;
+}
+
+body.quienes-somos .about-split.reverse .about-image {
+	margin-top: 3rem;
+	order:2;
+	display: flex;
+	justify-content: center;
+}
+
+body.quienes-somos .about-split.reverse .about-image img {
+	max-width: 520px;
+	width: 100%;
+	height: auto;
 }
 
 /* scroll */
@@ -820,8 +858,7 @@ body.nuestros-servicios-y-actividades .page-title {
 /*====VERSION MOBILE===*/
 
 /* =========================
-MOBILE GLOBAL (ALL PAGES)
-========================= */
+MOBILE GLOBAL (ALL PAGES) */
 @media (max-width: 768px) {
 
 	html, body {
