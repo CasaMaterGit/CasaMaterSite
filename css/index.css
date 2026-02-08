@@ -21,7 +21,7 @@
 		--text-color: #000000;        
 		
 		--menu-link-color: #b44388;
-		--menu-link-color-active: #b44388;
+		--menu-link-color-active: #6e3d5b;
 		--menu-link-color-visited: #b44388;
 	}
 }
@@ -426,39 +426,6 @@ code {
 	margin: 0 auto;
 }
 
-/* ===== HOME: DEPOIMENTOS ===== */
-
-.section-title {
-	text-align: center;
-	margin-bottom: 3rem;
-}
-
-/* grid de depoimentos */
-.testimonials {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 1.5rem;
-}
-
-/* card */
-.testimonial {
-	background: #455e3e;
-	color: white;
-	padding: 1.5rem;
-	border-radius: 8px;
-}
-
-.testimonial h3 {
-	margin: 0 0 0.75rem 0;
-	font-size: 1rem;
-	font-weight: 700;
-}
-
-.testimonial p {
-	font-size: 0.95rem;
-	line-height: 1.5;
-}
-
 /* ===== HOME: NUESTRA VISIÓN ===== */
 
 .section-vision .vision-panel {
@@ -501,7 +468,7 @@ body .actuacion-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
-	margin-top: 3rem;
+	margin-top: 0.5rem;
 	text-align: center;
 	align-items: flex-start;
 }
@@ -523,12 +490,12 @@ body .actuacion-item h3 {
 body .actuacion-item p {
 	font-size: 1rem;
 	line-height: 1.6;
-	color: #333;
+	color: black;
 }
 
 body .icon-circle {
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	background-color: #b44388; /* cor do círculo */
 	display: flex;
@@ -550,17 +517,51 @@ body .actuacion-button {
 
 body .actuacion-button .btn-primary {
 	display: inline-block;
-	background-color: #b44388;
+	background-color: #455e3e;
 	color: #fff;
 	padding: 0.8rem 2rem;
-	font-weight: 600;
+	font-weight: 400;
+	font-size: 18px;
 	border-radius: 8px;
 	text-decoration: none;
 	transition: background 0.3s ease;
 }
 
 body .actuacion-button .btn-primary:hover {
-	background-color: #9c3570;
+	background-color: #344230;
+}
+
+/* ===== HOME: DEPOIMENTOS ===== */
+
+.section-title {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+/* grid de depoimentos */
+.testimonials {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1.5rem;
+}
+
+/* card */
+.testimonial {
+	background: #455e3e;
+	color: white;
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+
+.testimonial h3 {
+	margin: 0 0 0.75rem 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.testimonial p {
+	font-size: 0.95rem;
+	line-height: 1.5;
 }
 
 /* ===== HOME: GALERIA CARROSSEL ===== */
@@ -869,6 +870,8 @@ body.quienes-somos .reveal-text.is-visible {
 
 body.nuestros-servicios-y-actividades .page-title {
 	margin-top: 6rem;
+	margin-bottom: 4rem;
+	text-align:  center;
 	color: #455e3e;
 }
 
