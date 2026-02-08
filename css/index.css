@@ -932,6 +932,10 @@ body.nuestros-servicios-y-actividades .page-title {
 		overflow-x: hidden;
 	}
 
+	main {
+		padding-top: 80px; /* altura real do header */
+	}
+
 	main, footer {
 		padding-left: 1rem;
 		padding-right: 1rem;
@@ -1036,10 +1040,14 @@ body.nuestros-servicios-y-actividades .page-title {
 		line-height: 1.5;
 	}
 
-	body.quienes-somos .about-split,
-	body.quienes-somos .about-split.reverse {
+	body.quienes-somos .about-split {
 		grid-template-columns: 1fr;
 		gap: 2rem;
+	}
+
+	body.quienes-somos .about-split.reverse {
+		display: flex;
+		flex-direction: column;
 	}
 
 	body.quienes-somos .about-text {
