@@ -1,33 +1,40 @@
 media: public/img
 
 content:
-  # === Home ===
   - name: home
     label: Home
     type: file
     path: content/home/index.md
     fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      # Slider de imagens da home
+      - { name: title, label: Título, type: string }
+
       - name: slides
         label: Slider
         type: list
-        item:
-          type: object
-          fields:
-            - { name: image, label: "Imagem do slide", type: image, required: true }
-            - { name: title, label: "Título do slide", type: string }
-            - { name: subtitle, label: "Subtítulo / frase curta", type: string }
-      # Sessões da Home
-      - name: mission
-        label: Missão / Valores
-        type: rich-text
+        fields:
+          - { name: image, label: Imagem, type: image, required: true }
+          - { name: title, label: Título, type: string }
+          - { name: subtitle, label: Subtítulo, type: string }
+
+      - name: actuacion
+        label: Atuación
+        type: list
+        fields:
+          - { name: icon, label: Ícone, type: image }
+          - { name: title, label: Título, type: string }
+          - { name: text, label: Texto, type: text }
+
       - name: testimonials
-        label: Testemunhos
-        type: rich-text
-      - name: contact
-        label: Contato (sessão)
-        type: rich-text
+        label: Testimonios
+        type: list
+        fields:
+          - { name: name, label: Nome, type: string }
+          - { name: text, label: Texto, type: text }
+
+      - name: gallery
+        label: Galeria
+        type: list
+        field: { name: image, label: Imagem, type: image }
 
   # === Quem Somos ===
   - name: quem-somos
