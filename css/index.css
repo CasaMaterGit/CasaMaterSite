@@ -716,7 +716,7 @@ body.quienes-somos .about-quote {
 
 body.quienes-somos .about-quote p {
 	margin: 0;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-style: italic;
 	line-height: 1.6;
 	font-family: var(--font-family);
@@ -1035,34 +1035,80 @@ body.nuestros-servicios-y-actividades .page-title {
 /* ===== QUIÉNES SOMOS – MOBILE ====== */
 @media (max-width: 768px) {
 
+	/* seção geral */
+	body.quienes-somos .home-section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	/* citação */
+	body.quienes-somos .about-quote {
+		margin: 1.5rem auto 2.5rem;
+		padding: 1rem;
+	}
+
 	body.quienes-somos .about-quote p {
-		font-size: 1.1rem;
-		line-height: 1.5;
+		font-size: 1.6rem;
+		line-height: 1.4;
 	}
 
+	/* layout principal */
 	body.quienes-somos .about-split {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	body.quienes-somos .about-split.reverse {
 		display: flex;
 		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 4rem;
+		padding: 0 1.2rem;
 	}
 
+	/* texto */
 	body.quienes-somos .about-text {
-		padding: 2.5rem 1.5rem;
+		padding: 2rem 1.5rem;
 		font-size: 1.05rem;
+		line-height: 1.7;
+		text-align: left;
+		position: relative;
 	}
 
-	body.quienes-somos .about-text .page-title {
-		font-size: 1.4rem;
-		left: 1rem;
-		top: -1.8rem;
+	/* versão reverse */
+	body.quienes-somos .about-split.reverse {
+		padding: 0 1.2rem;
 	}
 
-	body.quienes-somos .about-image img {
+	body.quienes-somos .about-split.reverse .about-text {
+		margin-left: 0;
+		width: 100%;
+		padding: 2.5rem 1.5rem 2rem;
+		font-size: 1.05rem;
+		line-height: 1.7;
+	}
+
+	/* título flutuante */
+	body.quienes-somos .about-text .page-title,
+	body.quienes-somos .about-split.reverse .page-title {
+		position: relative;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+		box-shadow: none;
+	}
+
+	/* imagens */
+	body.quienes-somos .about-image img,
+	body.quienes-somos .about-split.reverse .about-image img {
 		max-width: 100%;
+	}
+
+	body.quienes-somos .about-image {
+		margin-top: 1rem;
+	}
+
+	/* animação scroll */
+	body.quienes-somos .reveal-img,
+	body.quienes-somos .reveal-text {
+		transform: translateY(20px);
 	}
 }
 
