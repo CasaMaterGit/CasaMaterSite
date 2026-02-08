@@ -716,7 +716,7 @@ body.quienes-somos .about-quote {
 
 body.quienes-somos .about-quote p {
 	margin: 0;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-style: italic;
 	line-height: 1.6;
 	font-family: var(--font-family);
@@ -1032,19 +1032,19 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 }
 
-/* ===== QUIÉNES SOMOS – MOBILE ====== */
-@media (max-width: 768px) {
+/* ===== QUIÉNES SOMOS – MOBILE ===== */
 
-	/* seção geral */
+@media (max-width: 768px) {
 	body.quienes-somos .home-section {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding: 2rem 0;
 	}
 
-	/* citação */
 	body.quienes-somos .about-quote {
 		margin: 1.5rem auto 2.5rem;
 		padding: 1rem;
+		text-align: center;
+		opacity: 1 !important;
+		transform: none !important;
 	}
 
 	body.quienes-somos .about-quote p {
@@ -1052,21 +1052,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		line-height: 1.4;
 	}
 
-	/* A QUOTE SEMPRE VISÍVEL */
-	body.quienes-somos .about-quote,
-	body.quienes-somos .about-quote * {
-		opacity: 1 !important;
-		transform: none !important;
-	}
-
-	/* Reveal só depois da quote */
-	body.quienes-somos .about-split .reveal-text,
-	body.quienes-somos .about-split .reveal-img {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	/* layout principal */
 	body.quienes-somos .about-split {
 		display: flex;
 		flex-direction: column;
@@ -1075,55 +1060,75 @@ body.nuestros-servicios-y-actividades .page-title {
 		padding: 0 1.2rem;
 	}
 
-	/* texto */
-	body.quienes-somos .about-text {
-		padding: 2rem 1.5rem;
-		font-size: 1.05rem;
-		line-height: 1.7;
-		text-align: justify;
-		position: relative;
-	}
-
-	/* versão reverse */
+  /* versão reverse */
 	body.quienes-somos .about-split.reverse {
+		flex-direction: column; /* garante coluna no mobile */
 		padding: 0 1.2rem;
 	}
 
-	body.quienes-somos .about-split.reverse .about-text {
-		margin-left: 0;
-		width: 100%;
-		padding: 2.5rem 1.5rem 2rem;
+	body.quienes-somos .about-text {
+		position: relative;
+		padding: 2.8rem 1.5rem 2rem;
 		font-size: 1.05rem;
 		line-height: 1.7;
+		text-align: justify;
+		hyphens: auto;
+		width: 100%;
+		margin-left: 0; /* remove sobra da reverse */
 	}
 
-	/* título flutuante */
-	body.quienes-somos .about-text .page-title,
-	body.quienes-somos .about-split.reverse .page-title {
-		position: relative;
-		top: 0;
-		left: 0;
-		display: inline-block;
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
-		box-shadow: none;
+	body.quienes-somos .about-split.reverse .about-text {
+		padding: 2.8rem 1.5rem 2rem;
+		margin-left: 0;
 	}
 
-	/* imagens */
-	body.quienes-somos .about-image img,
-	body.quienes-somos .about-split.reverse .about-image img {
-		max-width: 100%;
+	body.quienes-somos .about-text > .page-title {
+		position: absolute;
+		top: 0.5rem; /* canto superior */
+		left: 0.8rem; /* canto esquerdo */
+		font-size: 0.9rem;
+		padding: 0.35rem 0.85rem;
+		border-radius: 999px;
+		line-height: 1;
+		white-space: nowrap;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+		background: #ffffff;
+		z-index: 2;
+		transform: translateY(-50%);
+	}
+
+  /* cores por tipo de bloco */
+	body.quienes-somos .about-text > .page-title {
+		color: #455e3e;
+	}
+
+	body.quienes-somos .about-split.reverse .about-text > .page-title {
+		color: #b44388;
 	}
 
 	body.quienes-somos .about-image {
+		display: flex;
+		justify-content: center;
 		margin-top: 1rem;
 	}
 
-	/* animação scroll */
-	body.quienes-somos .reveal-img,
-	body.quienes-somos .reveal-text {
+	body.quienes-somos .about-image img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	body.quienes-somos .about-split .reveal-text,
+	body.quienes-somos .about-split .reveal-img {
+		opacity: 0;
 		transform: translateY(20px);
 	}
+
+	body.quienes-somos .is-visible .reveal-text,
+	body.quienes-somos .is-visible .reveal-img {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
 }
 
 /* ====== SERVICIOS – MOBILE ======== */
