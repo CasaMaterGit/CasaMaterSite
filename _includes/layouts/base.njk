@@ -15,7 +15,7 @@
   <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 </head>
 
-<body class="{{ title | slug }}">
+<body class="{% if title %}{{ title | slug }}{% else %}home{% endif %}">
 
   <!-- Skip link -->
   <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
