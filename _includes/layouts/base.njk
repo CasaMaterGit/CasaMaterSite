@@ -23,8 +23,11 @@
   <!-- Header / Menu -->
   <header class="site-header">
     <div class="site-logo">
-      <img src="/img/logo.png" alt="logo" eleventy:ignore>
-    </div>    
+      <a href="/" aria-label="Voltar para a página inicial">
+        <img src="/img/logo.png" alt="Casa Mater" eleventy:ignore>
+      </a>
+    </div>
+        
     <nav>
       <ul class="nav">
         {%- for page in collections.all | eleventyNavigation %}

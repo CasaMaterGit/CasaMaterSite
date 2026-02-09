@@ -218,79 +218,48 @@ procesos con dignidad, bienestar y derechos garantizados, en equilibrio con los 
 </section>
 
 <script>
-const track = document.querySelector('.slider-track');
-const slides = Array.from(document.querySelectorAll('.slide'));
-const dotsContainer = document.querySelector('.dots');
-const prev = document.querySelector('.arrow.left');
-const next = document.querySelector('.arrow.right');
+document.addEventListener("DOMContentLoaded", () => {
 
-let current = 0;
+  const track = document.querySelector('.slider-track');
+  if (!track) return; // ← ISSO SALVA O MOBILE
 
-function updateSlider() {
-  // move o track
-  track.style.transform = `translateX(-${current * 100}%)`;
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsContainer = document.querySelector('.dots');
+  const prev = document.querySelector('.arrow.left');
+  const next = document.querySelector('.arrow.right');
 
-  // atualiza bolinhas
-  document.querySelectorAll('.dot').forEach((d, i) => {
-    d.classList.toggle('active', i === current);
+  let current = 0;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  // cria bolinhas
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot';
+    dot.onclick = () => {
+      current = i;
+      updateSlider();
+    };
+    dotsContainer.appendChild(dot);
   });
 
-  // atualiza posição do texto de cada slide
-  slides.forEach((slide, i) => {
-    const txt = slide.querySelector('.slide-text');
-    if (!txt) return;
-
-    if (i === current) {
-      txt.style.opacity = "1";
-      if (i === 0) {
-        txt.style.left = "50%";
-        txt.style.top = "50%";
-        txt.style.transform = "translate(-50%, -50%)";
-        txt.style.textAlign = "center";
-      } else {
-        txt.style.left = "2rem";
-        txt.style.top = "50%";
-        txt.style.transform = "translateY(-50%)";
-        txt.style.textAlign = "left";
-      }
-    } else {
-      txt.style.opacity = "0"; // oculta os textos dos slides inativos
-    }
-  });
-}
-
-// cria bolinhas
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'dot';
-  dot.onclick = () => {
-    current = i;
+  next?.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
     updateSlider();
-  };
-  dotsContainer.appendChild(dot);
-});
+  });
 
-// setas
-next.onclick = () => {
-  current = (current + 1) % slides.length;
+  prev?.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
   updateSlider();
-};
-prev.onclick = () => {
-  current = (current - 1 + slides.length) % slides.length;
-  updateSlider();
-};
-
-// swipe mobile
-let startX = 0;
-track.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
 });
-track.addEventListener('touchend', e => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) next.click();
-  if (endX - startX > 50) prev.click();
-});
-
-// inicializa slider
-updateSlider();
 </script>
+
