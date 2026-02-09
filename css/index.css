@@ -974,19 +974,22 @@ body.nuestros-servicios-y-actividades .page-title {
 
   /* slider */
 	.slide {
-		height: 55vh;          /* mantém a altura proporcional à tela */
-		overflow: hidden;      /* evita que partes do slide vaze */
+		height: auto;          /* altura agora depende da imagem */
+		max-height: 70vh;      /* evita que fique gigante em telas muito altas */
+		overflow: hidden;
 		position: relative;
+		display: flex;         /* para centralizar verticalmente */
+		justify-content: center;
+		align-items: center;
+		padding: 0.1rem 0;     /* pequeno espaçamento top/bottom */
 	}
 
 	.slide img {
-		width: auto;          /* mantém a proporção original */
-		max-width: 90%;       /* nunca ultrapassa 90% da largura do slide */
-		height: auto;         /* mantém proporção */
-		max-height: 45vh;     /* limita a altura em relação à tela */
-		object-fit: contain;  /* a imagem se ajusta dentro do slide sem cortar */
+		width: 90%;            /* ocupa 90% da largura do slide */
+		height: auto;          /* mantém proporção */
+		object-fit: contain;   /* mostra a imagem inteira sem cortar */
 		display: block;
-		margin: 0 auto;       /* centraliza horizontalmente */
+		margin: 0 auto;        /* centraliza horizontalmente */
 	}
 
 	.slide-text {
