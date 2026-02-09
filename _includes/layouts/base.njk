@@ -128,6 +128,13 @@
     document.addEventListener("DOMContentLoaded", () => {
       const reveals = document.querySelectorAll(".reveal");
 
+      if (window.innerWidth <= 768) {
+        // Mobile: todas as seções ficam visíveis sem scroll
+        reveals.forEach(el => el.classList.add("is-visible"));
+        return;
+      }
+
+      // Desktop: mantém o efeito original
       const observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
@@ -137,13 +144,12 @@
             }
           });
         },
-        {
-          threshold: 0.15
-        }
+        { threshold: 0.15 }
       );
 
       reveals.forEach(el => observer.observe(el));
     });
+
   </script>
 
   <!-- Menu Reveal -->
