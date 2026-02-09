@@ -57,15 +57,7 @@
 
   <!-- Main Content -->
   <main id="main">
-    
-      {# HOME: slides e seções opcionais #}
-      {% if slides %}
-        <section class="hero-slider reveal">
-          {{ slides | safe }}
-        </section>
-      {% endif %}
-
-      {% if home_section_1 %}
+       {% if home_section_1 %}
         <section class="home-section section-white reveal">
           {{ home_section_1 | safe }}
         </section>
