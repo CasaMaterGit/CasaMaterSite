@@ -129,15 +129,11 @@
               <h1 class="page-title">Eventos</h1>
 
               <ul class="eventos">
-                {% for event in events | sort(attribute='date', reverse=true) %}
+                {% for event in events %}
                   <li class="evento-item">
-                    <h2>{{ event.title }}</h2>
-                    <p>{{ event.description | safe }}</p>
-
-                    {% if event.image %}
-                      <img src="{{ event.image }}" alt="{{ event.title }}">
-                    {% endif %}
-
+                    {% if event.title %}<h2>{{ event.title }}</h2>{% endif %}
+                    {% if event.description %}<p>{{ event.description | safe }}</p>{% endif %}
+                    {% if event.image %}<img src="{{ event.image }}" alt="{{ event.title }}">{% endif %}
                     {% if event.video %}
                       <video controls>
                         <source src="{{ event.video }}" type="video/mp4">
