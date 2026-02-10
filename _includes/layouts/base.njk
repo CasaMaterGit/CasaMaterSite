@@ -122,17 +122,17 @@
             </div>
           </section>
         {% endif %}
-        
+
         {% if events %}
           <section class="home-section section-magenta reveal eventos-list">
             <div class="content">
               <h1 class="page-title">Eventos</h1>
 
               <ul class="eventos">
-                {%- for event in events | sort(attribute='date', reverse=true) %}
+                {% for event in events | sort(attribute='date', reverse=true) %}
                   <li class="evento-item">
                     <h2>{{ event.title }}</h2>
-                    <p>{{ event.description }}</p>
+                    <p>{{ event.description | safe }}</p>
 
                     {% if event.image %}
                       <img src="{{ event.image }}" alt="{{ event.title }}">
@@ -145,12 +145,11 @@
                       </video>
                     {% endif %}
                   </li>
-                {%- endfor %}
+                {% endfor %}
               </ul>
             </div>
           </section>
         {% endif %}
-
 
       {% endif %}
 
