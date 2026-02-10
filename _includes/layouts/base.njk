@@ -122,6 +122,35 @@
             </div>
           </section>
         {% endif %}
+        
+        {% if events %}
+          <section class="home-section section-magenta reveal eventos-list">
+            <div class="content">
+              <h1 class="page-title">Eventos</h1>
+
+              <ul class="eventos">
+                {%- for event in events | sort(attribute='date', reverse=true) %}
+                  <li class="evento-item">
+                    <h2>{{ event.title }}</h2>
+                    <p>{{ event.description }}</p>
+
+                    {% if event.image %}
+                      <img src="{{ event.image }}" alt="{{ event.title }}">
+                    {% endif %}
+
+                    {% if event.video %}
+                      <video controls>
+                        <source src="{{ event.video }}" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                      </video>
+                    {% endif %}
+                  </li>
+                {%- endfor %}
+              </ul>
+            </div>
+          </section>
+        {% endif %}
+
 
       {% endif %}
 
