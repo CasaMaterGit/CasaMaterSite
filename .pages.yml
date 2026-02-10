@@ -74,6 +74,20 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
+  - name: events
+    label: Eventos
+    type: collection
+    path: content/eventos
+    view:
+      fields: [ title, draft, date ]
+    fields:
+      - { name: title, label: Título, type: string, required: true }
+      - { name: description, label: Descrição, type: string }
+      - { name: date, label: Data, type: date }
+      - { name: draft, label: Rascunho, type: boolean }
+      - { name: body, label: Conteúdo, type: rich-text }
+
+
   # === Metadata (site-wide) ===
   - name: metadata
     label: Metadata
