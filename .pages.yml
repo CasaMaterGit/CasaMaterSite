@@ -123,6 +123,7 @@ content:
 
 
 
+
   # === Metadata (site-wide) ===
   - name: metadata
     label: Metadata
