@@ -78,6 +78,7 @@ content:
     label: Eventos
     type: collection
     path: content/eventos
+    default: layouts/evento.njk
     view:
       fields: [ title, draft, date ]
     fields:
