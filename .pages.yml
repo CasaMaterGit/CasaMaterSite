@@ -112,12 +112,14 @@ content:
       - name: events
         label: Lista de Eventos
         type: list
-        fields:
-          - { name: title, label: Título, type: string, required: true }
-          - { name: description, label: Texto, type: rich-text }
-          - { name: date, label: Data, type: date }
-          - { name: image, label: Imagem, type: image }
-          - { name: video, label: Vídeo, type: file }
+        item:
+          type: object
+          fields:
+            - { name: title, label: Título, type: string, required: true }
+            - { name: description, label: Texto, type: rich-text }
+            - { name: date, label: Data, type: date }
+            - { name: image, label: Imagem, type: image }
+            - { name: video, label: Vídeo, type: file }
 
 
 
