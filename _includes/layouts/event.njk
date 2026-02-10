@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+hideTitle: true
+---
+
+<section class="home-section reveal">
+  <div class="content event-wrapper">
+
+    <h1 class="event-title">{{ title }}</h1>
+
+    <time class="event-date" datetime="{{ page.date | htmlDateString }}">
+      {{ page.date | readableDate("dd 'de' LLLL yyyy") }}
+    </time>
+
+    <article class="event-content">
+      {{ content | safe }}
+    </article>
+
+    {%- if collections.events %}
+      {%- set previousEvent = collections.events | getPreviousCollectionItem %}
+      {%- set nextEvent = collections.events | getNextCollectionItem %}
+      {% if nextEvent or previousEvent %}
+        <ul class="links-nextprev">
+          {% if previousEvent %}
+            <li class="links-nextprev-prev">
+              ← Anterior<br>
+              <a href="{{ previousEvent.url }}">{{ previousEvent.data.title }}</a>
+            </li>
+          {% endif %}
+          {% if nextEvent %}
+            <li class="links-nextprev-next">
+              Siguiente →<br>
+              <a href="{{ nextEvent.url }}">{{ nextEvent.data.title }}</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+  </div>
+</section>

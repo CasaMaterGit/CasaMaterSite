@@ -74,20 +74,47 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
-  # === Eventos ===
+# === Eventos ===
   - name: events
     label: Eventos
     type: collection
-    path: content/eventos
-    default: layouts/event.njk
+
+    # Caminho REAL onde o Eleventy lê
+    path: _includes/content/events
+
+    # Front matter padrão que o CMS vai criar
+    default:
+      layout: layouts/event.njk
+      tags:
+        - events
+      draft: false
+
     view:
       fields: [ title, draft, date ]
+
     fields:
-      - { name: title, label: Título, type: string, required: true }
-      - { name: description, label: Descrição, type: string }
-      - { name: date, label: Data, type: date }
-      - { name: draft, label: Rascunho, type: boolean }
-      - { name: body, label: Conteúdo, type: rich-text }
+      - name: title
+        label: Título
+        type: string
+        required: true
+
+      - name: description
+        label: Descrição
+        type: string
+
+      - name: date
+        label: Data
+        type: date
+        required: true
+
+      - name: draft
+        label: Rascunho
+        type: boolean
+        default: false
+
+      - name: body
+        label: Conteúdo
+        type: rich-text
 
 
   # === Metadata (site-wide) ===

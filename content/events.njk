@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+title: Eventos
+hideTitle: true
+permalink: /events/
+eleventyNavigation:
+  key: Eventos
+  order: 3
+---
+
+{% set eventslist = collections.events %}
+{% include "content-events.njk" %}
