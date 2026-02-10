@@ -59,7 +59,7 @@ content:
         label: Corpo do conteúdo
         type: rich-text
 
-
+  # === Blog ===
   - name: posts
     label: Posts
     type: collection
@@ -74,11 +74,12 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
+  # === Eventos ===
   - name: events
     label: Eventos
     type: collection
     path: content/eventos
-    default: layouts/evento.njk
+    default: layouts/event.njk
     view:
       fields: [ title, draft, date ]
     fields:
