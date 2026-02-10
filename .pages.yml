@@ -1,4 +1,22 @@
 media: public/img
+content:
+
+  # === Blog Posts ===
+  - name: blog_posts
+    label: "Blog Posts"
+    type: folder
+    folder: content/blog
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    fields:
+      - name: title
+        label: "Título"
+        widget: string
+      - name: body
+        label: "Conteúdo"
+        widget: markdown
 
 # === Metadata (site-wide) ===
 - name: metadata
@@ -6,20 +24,3 @@ media: public/img
   type: file
   path: _data/metadata.js
   format: code
-
-# === Blog Posts ===
-- name: blog_posts
-  label: "Blog Posts"
-  type: folder
-  folder: content/blog
-  create: true
-  delete: true
-  extension: md
-  format: frontmatter
-  fields:
-    - name: title
-      label: "Título"
-      widget: string
-    - name: body
-      label: "Conteúdo"
-      widget: markdown
