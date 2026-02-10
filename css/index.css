@@ -382,23 +382,6 @@ code {
 	background-color: #fff;
 }
 
-.slide-text {
-	position: absolute;
-	color: white;
-	z-index: 5;
-	transition: all 0.5s ease, opacity 0.5s ease;
-}
-
-.slide-text h1 {
-	font-size: 3rem;
-	margin: 0 0 0.5rem 0;
-}
-
-.slide-text p {
-	font-size: 1.25rem;
-	margin: 0;
-}
-
 /* ===== HOME: SECTIONS GERAL ===== */
 
 .home-section {
@@ -990,25 +973,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		object-fit: contain;   /* mostra a imagem inteira sem cortar */
 		display: block;
 		margin: 0 auto;        /* centraliza horizontalmente */
-	}
-
-	.slide-text {
-		position: absolute;    /* posiciona o texto sobre a imagem */
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		width: 90%;            /* evita que o texto encoste nas bordas */
-		color: #fff;           /* garante contraste */
-	}
-
-	.slide-text h1 {
-		font-size: 1.6rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.slide-text p {
-		font-size: 1rem;
 	}
 
 	/* setas */

@@ -73,26 +73,6 @@
         </section>
       {% endif %}
 
-      {% if title == "Blog" %}
-        <section class="home-section reveal">
-          <div class="content">
-            <h1 class="page-title">Blog</h1>
-
-            <ul class="blog-list">
-              {% for post in collections.blog | sort(attribute='date', reverse=true) %}
-                <li class="blog-item">
-                  <a href="{{ post.url }}">
-                    <h2>{{ post.data.title }}</h2>
-                    <p>{{ post.data.description }}</p>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </section>
-      {% endif %}
-
-
       {# SERVIÇOS #}
       {% if services %}
         <section class="home-section section-white reveal">
@@ -115,7 +95,7 @@
           <section class="home-section reveal">
             <div class="content">
 
-              {% if title and title != "Home" %}
+              {% if title and title != "Home" and not hideTitle %}
                 <h1 class="page-title">{{ title }}</h1>
               {% endif %}
 

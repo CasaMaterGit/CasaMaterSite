@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+title: Blog
+hideTitle: true
+permalink: /blog/
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}

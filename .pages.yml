@@ -36,38 +36,6 @@ content:
         type: list
         field: { name: image, label: Imagem, type: image }
 
-  # === Quem Somos ===
-  - name: quem-somos
-    label: Quem Somos
-    type: file
-    path: content/quem-somos/index.md
-    fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - { name: eleventyNavigation, label: Navigation, type: object, fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
-        }
-      - name: team
-        label: Equipe Casa Mater
-        type: rich-text
-      - name: partners
-        label: Nossos sócios
-        type: rich-text
-
-  # === Serviços ===
-  - name: servicos
-    label: Serviços
-    type: file
-    path: content/servicos/index.md
-    fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - { name: eleventyNavigation, label: Navigation, type: object, fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
-        }
-      - { name: body, label: Corpo do conteúdo, type: rich-text }
-
-
   # === Contato ===
   - name: contato
     label: Contato
@@ -90,6 +58,21 @@ content:
       - name: body
         label: Corpo do conteúdo
         type: rich-text
+
+
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/blog
+    view:
+      fields: [ title, draft, date ]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: body, label: Body, type: rich-text }
 
   # === Metadata (site-wide) ===
   - name: metadata
