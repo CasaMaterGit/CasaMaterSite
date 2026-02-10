@@ -1,26 +1,99 @@
 media: public/img
+
 content:
-
-  # === Blog Posts ===
-  - name: blog_posts
-    label: "Blog Posts"
-    type: folder
-    folder: content/blog
-    create: true
-    delete: true
-    extension: md
-    format: frontmatter
+  - name: home
+    label: Home
+    type: file
+    path: content/home/index.md
     fields:
-      - name: title
-        label: "Título"
-        widget: string
-      - name: body
-        label: "Conteúdo"
-        widget: markdown
+      - { name: title, label: Título, type: string }
 
-# === Metadata (site-wide) ===
-- name: metadata
-  label: Metadata
-  type: file
-  path: _data/metadata.js
-  format: code
+      - name: slides
+        label: Slider
+        type: list
+        fields:
+          - { name: image, label: Imagem, type: image, required: true }
+          - { name: title, label: Título, type: string }
+          - { name: subtitle, label: Subtítulo, type: string }
+
+      - name: actuacion
+        label: Atuación
+        type: list
+        fields:
+          - { name: icon, label: Ícone, type: image }
+          - { name: title, label: Título, type: string }
+          - { name: text, label: Texto, type: text }
+
+      - name: testimonials
+        label: Testimonios
+        type: list
+        fields:
+          - { name: name, label: Nome, type: string }
+          - { name: text, label: Texto, type: text }
+
+      - name: gallery
+        label: Galeria
+        type: list
+        field: { name: image, label: Imagem, type: image }
+
+  # === Quem Somos ===
+  - name: quem-somos
+    label: Quem Somos
+    type: file
+    path: content/quem-somos/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - { name: eleventyNavigation, label: Navigation, type: object, fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+        }
+      - name: team
+        label: Equipe Casa Mater
+        type: rich-text
+      - name: partners
+        label: Nossos sócios
+        type: rich-text
+
+  # === Serviços ===
+  - name: servicos
+    label: Serviços
+    type: file
+    path: content/servicos/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - { name: eleventyNavigation, label: Navigation, type: object, fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+        }
+      - { name: body, label: Corpo do conteúdo, type: rich-text }
+
+
+  # === Contato ===
+  - name: contato
+    label: Contato
+    type: file
+    path: content/contato/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+  
+      - name: title
+        label: Título da página
+        type: string
+  
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+  
+      - name: body
+        label: Corpo do conteúdo
+        type: rich-text
+
+  # === Metadata (site-wide) ===
+  - name: metadata
+    label: Metadata
+    type: file
+    path: _data/metadata.js
+    format: code
