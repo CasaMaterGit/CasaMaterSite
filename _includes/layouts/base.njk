@@ -15,7 +15,8 @@
   <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 </head>
 
-<body class="{% if title %}{{ title | slug }}{% else %}home{% endif %}">
+<body class="{{ bodyClass or (title | slug) or 'home' }}">
+
 
   <!-- Skip link -->
   <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -60,7 +61,7 @@
 
   <!-- Main Content -->
   <main id="main">
-       {% if home_section_1 %}
+      {% if home_section_1 %}
         <section class="home-section section-white reveal">
           {{ home_section_1 | safe }}
         </section>
@@ -69,6 +70,25 @@
       {% if home_section_2 %}
         <section class="home-section section-magenta reveal">
           {{ home_section_2 | safe }}
+        </section>
+      {% endif %}
+
+      {% if title == "Blog" %}
+        <section class="home-section reveal">
+          <div class="content">
+            <h1 class="page-title">Blog</h1>
+
+            <ul class="blog-list">
+              {% for post in collections.blog %}
+                <li class="blog-item">
+                  <a href="{{ post.url }}">
+                    <h2>{{ post.data.title }}</h2>
+                    <p>{{ post.data.description }}</p>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </section>
       {% endif %}
 

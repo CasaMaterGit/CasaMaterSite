@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Contacto
 eleventyNavigation:
   key: Contacto
-  order: 4
+  order: 7
 ---
 
 <div class="contact-item">

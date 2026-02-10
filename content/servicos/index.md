@@ -25,9 +25,5 @@ eleventyNavigation:
       <img src="/img/grupos.jpg" alt="Grupos de Apoyo" eleventy:ignore>
       <span>Grupos de Apoyo</span>
     </a>
-    <a href="/servicios/eventos/" class="service-card">
-      <img src="/img/eventos.jpg" alt="Eventos" eleventy:ignore>
-      <span>Eventos</span>
-    </a>
   </div>
 </div>

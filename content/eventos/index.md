@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 title: Eventos
-permalink: /servicios/eventos/
 eleventyNavigation:
   key: Eventos
-  parent: Servicios
+  parent: null
+  order: 4
 ---
 
 Contenido de Eventos.

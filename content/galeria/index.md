@@ -3,7 +3,7 @@ title: Galeria
 layout: layouts/base.njk
 eleventyNavigation:
   key: Galeria
-  order: 4
+  order: 6
 ---
 
 ## Galeria

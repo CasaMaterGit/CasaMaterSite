@@ -84,6 +84,14 @@ export default async function(eleventyConfig) {
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
+	// ===== BLOG COLLECTION (máx. 10 posts) =====
+	eleventyConfig.addCollection("blog", function (collectionApi) {
+		return collectionApi
+			.getFilteredByTag("blog")
+			.sort((a, b) => b.date - a.date)
+			.slice(0, 10);
+		});
+
 	eleventyConfig.addPlugin(IdAttributePlugin, {
 		// by default we use Eleventy’s built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),
