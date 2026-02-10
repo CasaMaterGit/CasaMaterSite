@@ -682,6 +682,107 @@ body .actuacion-button .btn-primary:hover {
 	align-items: center;
 }
 
+/* ===== BLOG POSTS ===== */
+
+.post-wrapper {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.post-title {
+	color: #636b2f; /* verde oliva */
+	font-size: 2.4rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 0.25rem;
+}
+
+.post-date {
+	display: block;
+	text-align: center;
+	font-size: 0.95rem;
+	opacity: 0.7;
+	margin-bottom: 2.5rem;
+}
+
+.post-content {
+	text-align: justify;
+	line-height: 1.9;
+	font-size: 1.1rem;
+}
+
+/* espaçamento melhor para markdown */
+.post-content p {
+	margin-bottom: 1.4rem;
+}
+
+.post-content h2,
+.post-content h3 {
+	color: #636b2f;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.post-content ul,
+.post-content ol {
+	padding-left: 1.2rem;
+}
+
+/*BLOG*/
+
+.blog-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1rem;
+}
+
+.blog-card {
+	background-color: #ffffff;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-card a {
+	text-decoration: none;
+	color: inherit; /* mantém a cor do título */
+}
+
+.blog-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.blog-card h2 {
+	font-size: 1.4rem;
+	color: #636b2f; /* verde oliva, mesma cor do site */
+	margin: 1rem;
+}
+
+.blog-date {
+	display: block;
+	margin: 0 1rem 0.5rem;
+	color: #b44388; /* ou outra cor de destaque */
+	font-size: 0.9rem;
+}
+
+.blog-description {
+	margin: 0 1rem 1rem;
+	text-align: justify;
+	line-height: 1.6;
+	color: #000;
+}
+
+
 /* ===== PÁGINA QUIÉNES SOMOS ===== */
 
 body.quienes-somos .home-section {
