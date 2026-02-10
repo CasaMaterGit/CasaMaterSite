@@ -1,8 +1,7 @@
 ---
-layout: layouts/base.njk
+title: Teste 1
 eleventyNavigation:
   key: Eventos
   order: 4
-events: []
+events: Teste1 paragrafo
 ---
-conteudo
