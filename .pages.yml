@@ -91,7 +91,7 @@ content:
         label: Corpo do conteúdo
         type: rich-text
 
-  #BLOG
+  #======BLOG======
   - name: posts
     label: Posts do Blog
     type: folder
