@@ -923,56 +923,6 @@ body.nuestros-servicios-y-actividades .page-title {
 	background: #ffffff;
 }
 
-/* ===== BLOG POSTS===== */
-
-body.blog-post .page-title {
-	text-align: center;
-	font-size: 2rem;
-	margin-bottom: 2rem;
-	color: #636b2f;
-}
-
-body.blog-post .content {
-	max-width: 720px;
-	margin: 0 auto;
-}
-
-body.blog-post .content p {
-	text-align: justify;
-	line-height: 1.7;
-	font-size: 1.05rem;
-}
-
-/* ===== BLOG PAGE ===== */
-body.blog-page .page-title {
-	display: none; /* remove o título "Blog" */
-}
-
-body.blog-page .blog-list {
-	list-style: disc;
-	padding: 0;
-	margin: 0 auto;
-	max-width: 720px;
-}
-
-body.blog-page .blog-list .blog-item {
-	margin-bottom: 1rem;
-}
-
-body.blog-page .blog-list .blog-item a {
-	text-decoration: none; 
-	font-size: 0.7rem;     
-	color: black;          
-}
-
-body.blog-page .blog-list .blog-item a:hover {
-	color: #b44388; /* cor do site ao passar o mouse */
-}
-
-body.blog-page .blog-list .blog-item p {
-	display: none; /* esconde o resumo */
-}
-
 /*====VERSION MOBILE===*/
 
 /* MOBILE GLOBAL (ALL PAGES) */

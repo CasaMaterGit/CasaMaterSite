@@ -91,40 +91,31 @@ content:
         label: Corpo do conteúdo
         type: rich-text
 
-  # ====Eventos======
-  - name: eventos
-    label: Eventos
-    type: file
-    path: content/eventos/index.md
+  #BLOG
+  - name: posts
+    label: Posts do Blog
+    type: folder
+    folder: content/blog
+    create: true
     fields:
       - name: title
-        label: Título da Página
+        label: Título do Post
         type: string
-  
-      - name: eleventyNavigation
-        label: Navigation
-        type: object
-        fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
-  
-      - name: events
-        label: Lista de Eventos
-        type: list
-        item:
-          type: object
-          fields:
-            - name: title
-              label: Título do Evento
-              type: string
-              required: true
-            - name: description
-              label: Texto do Evento
-              type: rich-text
-            - name: media
-              label: Mídia (Imagem ou Vídeo)
-              type: file
-
+        required: true
+      - name: description
+        label: Resumo
+        type: rich-text
+      - name: date
+        label: Data do Post
+        type: date
+      - name: content
+        label: Conteúdo
+        type: rich-text
+      - name: layout
+        label: Layout
+        type: string
+        hidden: true
+        default: layouts/base.njk
 
   # === Metadata (site-wide) ===
   - name: metadata

@@ -79,7 +79,7 @@
             <h1 class="page-title">Blog</h1>
 
             <ul class="blog-list">
-              {% for post in collections.blog %}
+              {% for post in collections.blog | sort(attribute='date', reverse=true) %}
                 <li class="blog-item">
                   <a href="{{ post.url }}">
                     <h2>{{ post.data.title }}</h2>
@@ -91,6 +91,7 @@
           </div>
         </section>
       {% endif %}
+
 
       {# SERVIÇOS #}
       {% if services %}
