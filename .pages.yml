@@ -73,22 +73,6 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
-
-# === Eventos ===
-  - name: events
-      label: Eventos
-      type: collection
-      path: content/events
-      view:
-        fields: [ title, draft, date ]
-      fields:
-        - { name: title, label: Title, type: string, required: true }
-        - { name: description, label: Description, type: string }
-        - { name: date, label: Date, type: date }
-        - { name: draft, label: Draft, type: boolean }
-        - { name: tags, label: Tags, type: string, list: true }
-        - { name: body, label: Body, type: rich-text }
-
   # === Metadata (site-wide) ===
   - name: metadata
     label: Metadata
