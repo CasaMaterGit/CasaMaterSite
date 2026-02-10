@@ -43,7 +43,8 @@
     "zod-validation-error": "^3.5.2"
   },
   "dependencies": {
-    "@zachleat/heading-anchors": "^1.0.5"
+    "@zachleat/heading-anchors": "^1.0.5",
+    "slugify": "^1.6.6"
   },
   "main": "eleventy.config.js",
   "keywords": []
