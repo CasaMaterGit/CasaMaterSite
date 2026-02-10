@@ -1,5 +1,5 @@
 ---
-layout: layouts/evento.njk
+layout: layouts/event.njk
 title: Taller de Pintura
 description: Aprende técnicas de pintura
 date: 2026-03-20
