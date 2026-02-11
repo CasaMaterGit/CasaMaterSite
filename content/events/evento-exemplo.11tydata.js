@@ -1,4 +1,4 @@
 export default {
     tags: ["events"],
-    layout: "layouts/event.njk",
+    "layout": "layouts/event.njk",
 };
