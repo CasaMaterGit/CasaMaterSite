@@ -784,12 +784,61 @@ body .actuacion-button .btn-primary:hover {
 
 /* ===== EVENTOS ===== */
 
-.events-list {
+/* Página do evento */
+.event-wrapper {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.event-title {
+	color: #636b2f; /* verde oliva */
+	font-size: 2.4rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 0.25rem;
+}
+
+.event-date {
+	display: block;
+	text-align: center;
+	font-size: 0.95rem;
+	opacity: 0.7;
+	margin-bottom: 2.5rem;
+}
+
+.event-content {
+	text-align: justify;
+	line-height: 1.9;
+	font-size: 1.1rem;
+}
+
+/* markdown spacing */
+.event-content p {
+	margin-bottom: 1.4rem;
+}
+
+.event-content h2,
+.event-content h3 {
+	color: #636b2f;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.event-content ul,
+.event-content ol {
+	padding-left: 1.2rem;
+}
+
+/* ===== EVENTOS = BLOG (ALIAS CSS) ===== */
+
+/* grid igual ao blog */
+.event-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 1rem;
 }
 
+/* card igual ao blog */
 .event-card {
 	background-color: #ffffff;
 	border-radius: 12px;
@@ -800,41 +849,48 @@ body .actuacion-button .btn-primary:hover {
 	flex-direction: column;
 }
 
-.event-card a {
-	text-decoration: none;
-	color: inherit; /* mantém a cor do título */
-}
-
 .event-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* link */
+.event-card a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* imagem igual ao blog */
 .event-card img {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
 }
 
+/* título igual ao blog */
 .event-card h2 {
 	font-size: 1.4rem;
-	color: #636b2f; /* verde oliva, mesma cor do site */
+	color: #636b2f;
 	margin: 1rem;
 }
 
-.event-date {
+/* data igual ao blog */
+.event-card .event-date {
 	display: block;
 	margin: 0 1rem 0.5rem;
-	color: #b44388; /* ou outra cor de destaque */
+	color: #b44388;
 	font-size: 0.9rem;
 }
 
-.event-description {
+/* descrição igual ao blog */
+.event-card .event-description {
 	margin: 0 1rem 1rem;
 	text-align: justify;
 	line-height: 1.6;
 	color: #000;
 }
+
+
 
 /* ===== PÁGINA QUIÉNES SOMOS ===== */
 
