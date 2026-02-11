@@ -77,7 +77,6 @@ content:
       - { name: body, label: Body, type: rich-text }
 
 
-
   # === Blog ===
   - name: posts
     label: Posts
@@ -92,6 +91,7 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
+
   # === Metadata (site-wide) ===
   - name: metadata
     label: Metadata
