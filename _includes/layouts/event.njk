@@ -13,11 +13,11 @@ hideTitle: true
     </time>
 
     {% if image %}
+      {% set imgPath = image | replace("public/", "/") %}
       <div class="event-hero">
-        <img src="{{ image }}" alt="{{ title }}" eleventy:ignore>
+        <img src="{{ imgPath }}" alt="{{ title }}" eleventy:ignore>
       </div>
     {% endif %}
-
 
     <article class="event-content">
       {{ content | safe }}
