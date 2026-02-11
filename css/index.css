@@ -1,9 +1,9 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: 'Belleza', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 
-  /* cores gerais */
+	/* cores gerais */
 	--background-color: #ffffff; 
 	--text-color: #000000;       
 	
@@ -200,6 +200,7 @@ code {
 	gap: 1.5rem;
 	justify-content: center;
 	margin-top: 1rem;
+	font-size: 1.3rem;
 }
 
 .site-footer {
@@ -247,6 +248,7 @@ code {
 	-webkit-backdrop-filter: blur(8px);
 	z-index: 100;
 	transition: transform 0.3s ease, opacity 0.3s ease;
+	font-size: 1.3rem;
 }
 
 .site-header.is-hidden {
@@ -463,7 +465,7 @@ code {
 
 .section-vision .vision-overlay {
 	background: rgba(255, 255, 255, 0.55);
-	padding: 2rem;
+	padding: 2.2rem;
 	max-width: 800px;
 	border-radius: 8px;
 	text-align: center;
@@ -477,7 +479,7 @@ code {
 
 .section-vision .vision-overlay .vision-text {
 	font-family: var(--font-family);
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	line-height: 1.7;
 	text-align: justify;
 	color: #000000;
