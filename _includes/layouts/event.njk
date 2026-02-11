@@ -12,6 +12,13 @@ hideTitle: true
       {{ page.date | readableDate("dd 'de' LLLL yyyy") }}
     </time>
 
+    {% if image %}
+      <div class="event-hero">
+        <img src="{{ image }}" alt="{{ title }}">
+      </div>
+    {% endif %}
+
+
     <article class="event-content">
       {{ content | safe }}
     </article>
