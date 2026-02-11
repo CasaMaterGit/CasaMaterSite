@@ -13,9 +13,7 @@ hideTitle: true
     </time>
 
     {% if image %}
-      <div class="event-image">
-        <img src="{{ image }}" alt="{{ title }}" eleventy:ignore>
-      </div>
+      <img src="{{ image | replace('/public', '') }}" alt="{{ title }}" class="event-image" eleventy:ignore>
     {% endif %}
 
     <article class="event-content">
