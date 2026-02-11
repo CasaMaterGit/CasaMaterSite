@@ -5,9 +5,6 @@
       {%- for event in eventslist | reverse %}
         <article class="event-card">
           <a href="{{ event.url }}">
-            {% if event.data.image %}
-              <img src="{{ event.data.image }}" alt="{{ event.data.title }}">
-            {% endif %}
             <h2>{{ event.data.title }}</h2>
           </a>
           <time class="event-date" datetime="{{ event.date | htmlDateString }}">
