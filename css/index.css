@@ -634,93 +634,14 @@ body .actuacion-button .btn-primary:hover {
 .gallery-arrow.left { left: 0; }
 .gallery-arrow.right { right: 0; }
 
-/* ===== HOME: BLOCO CONTATO ===== */
 
-.contact-card {
-	background-image: url("/img/contacto.jpg");
-	background-size: cover;
-	background-position: center;
-	border-radius: 12px;
-	min-height: 320px;
-	display: flex;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
-
-/* overlay para legibilidade */
-.contact-overlay {
-	background: #636b2f;
-	padding: 2.5rem;
-	width: 100%;
-}
-
-.contact-text {
-	text-align: justify;
-	line-height: 1.7;
-	font-family: var(--font-family);
-	color: var(--text-color);
-	margin-bottom: 1.5rem;
-}
-
-/* email */
-.contact-item {
-	display: flex;
-	align-items: center;
-	gap: 0.75rem;
-	font-size: 1.1rem;
-}
-
-.contact-icon {
-	font-size: 1.2rem;
-	color: #b44388;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.contact-link {
-	text-decoration: none;
-	font-family: var(--font-family);
-	color: var(--text-color);
-	font-weight: 500;
-}
-
-.contact-link:hover {
-	color: #b44388;
-}
-
-/*insta*/
-.social-block {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-.social-block .section-title {
-	font-size: 1rem;
-	font-weight: 500;
-	margin-bottom: 0.75rem;
-	color: var(--text-color);
-}
-
-.instagram-icon {
-	max-width: 19px !important;
-	display: block;
-}
-
-.instagram-link:hover img {
-	transform: scale(1.15);
-	opacity: 1;
-}
-
-.contact-social {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: 4rem;
-	align-items: center;
+/* ===== COLABORADORAS ===== */
+/* seção colaboradores */
+#colaboradores.section-green {
+	border-radius: 24px;
+	margin: 2rem auto;      /* cria espaço para aparecer o arredondado */
+	padding: 3rem 0;       
+	max-width: 1200px;     
 }
 
 /* ===== BLOG POSTS ===== */
