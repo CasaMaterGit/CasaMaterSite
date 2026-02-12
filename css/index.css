@@ -451,12 +451,13 @@ code {
 /* ===== HOME: NUESTRA VISIÓN ===== */
 
 .section-vision .vision-panel {
-	background-image: url("/img/nuestra-vision.jpg");
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	border-radius: 12px;
-	min-height: 400px;
+	background-image: none;        /* REMOVE a imagem */
+	background-size: initial;
+	background-position: initial;
+
+	border-radius: 0;              /* opcional */
+	min-height: auto;              /* REMOVE altura forçada */
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -464,10 +465,10 @@ code {
 }
 
 .section-vision .vision-overlay {
-	background: rgba(255, 255, 255, 0.55);
-	padding: 2.2rem;
+	background: none;              /* REMOVE o fundo branco translúcido */
+	padding: 0;                    /* opcional */
 	max-width: 800px;
-	border-radius: 8px;
+	border-radius: 0;
 	text-align: center;
 }
 
@@ -476,6 +477,7 @@ code {
 	margin-bottom: 1rem;
 	color: #636b2f;
 }
+
 
 .section-vision .vision-overlay .vision-text {
 	font-family: var(--font-family);
