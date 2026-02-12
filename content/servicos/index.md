@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Nuestros Servicios y Actividades
 eleventyNavigation:
   key: Servicios
-  order: 3
+  order: 5
 ---
 <h1 class="page-title">Nuestros Servicios y Actividades</h1>
 
