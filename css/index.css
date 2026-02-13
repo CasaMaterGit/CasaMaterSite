@@ -231,7 +231,6 @@ code {
 	fill: currentColor; /* herda a cor do link */
 }
 
-
 /* =========== HEADER ================= */
 .site-header {
 	position: fixed;
@@ -1125,6 +1124,9 @@ body.nuestros-servicios-y-actividades .page-title {
 		padding: 3rem 1rem;
 	}
 }
+
+/* ====== CONTACTO ======*/
+
 
 /* ====HOME – MOBILE ====== */
 @media (max-width: 768px) {
