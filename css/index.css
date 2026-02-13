@@ -528,8 +528,6 @@ body .icon-circle {
 }
 
 body .icon-circle img {
-	width: 50%;
-	height: 50%;
 	object-fit: contain;
 }
 
