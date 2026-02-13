@@ -1206,6 +1206,30 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 }
 
+/*==== CONTACTO ===*/
+
+.contact-page {
+	font-size: 1.5rem;
+}
+
+.h1 {
+	color:#636b2f;
+}
+
+.contact-page a,
+.contact-page a:visited,
+.contact-page a:hover,
+.contact-page a:active {
+	text-decoration: none;
+	color: #636b2f; /* verde oliva */
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.contact-page a:hover {
+	color: #b44388; /* cor de destaque ao passar o mouse */
+}
+
 /*====VERSION MOBILE===*/
 
 /* MOBILE GLOBAL (ALL PAGES) */
