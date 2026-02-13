@@ -1003,7 +1003,7 @@ body.quienes-somos .about-image {
 }
 
 body.quienes-somos .about-image img {
-	max-width: 420px;       
+	max-width: 400px;       
 	width: 100%;
 	height: auto;
 	object-fit: contain;   
@@ -1041,7 +1041,7 @@ body.quienes-somos .reveal-text.is-visible {
 	transform: translateY(0);
 }
 
-/* === CASA MATER ACCORDION === */
+/* === acordiao === */
 .about-accordion {
 	border: none;
 }
@@ -1096,52 +1096,112 @@ body.nuestros-servicios-y-actividades .page-title {
 	color: #636b2f;
 }
 
-.services-grid {
-	display: grid !important;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
-	justify-content: start;
-	align-content: start;
-	direction: ltr;
-	text-align: left;
-	grid-auto-flow: row;
-}
-
-.service-card {
-	position: relative;
-	display: block;
-	border-radius: 12px;
-	overflow: hidden;
-	text-decoration: none;
-}
-
-.service-card img {
-	width: 100%;
-	height: 260px;
-	object-fit: cover;
-	display: block;
-}
-
-.service-card span {
-	position: absolute;
-	left: 0;                 
-	right: 0;                
-	bottom: 0;
+/* container principal */
+.services-accordion {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(231, 214, 196, 0.50);
-	color: #b44388;
-	font-size: 1.2rem;
+	flex-direction: column;
+	gap: 0.01em;
+}
+
+/* cada item do serviço */
+.service-item {
+	border-radius: 20px;
+	box-shadow: 0 0px 12px rgba(0,0,0, 0.5);
+	overflow: hidden;
+	background-color: white;
+	color: #636b2f;
+}
+
+/* summary apenas com texto */
+.service-item summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	background-color: white;
 	font-weight: 600;
-	padding: 0.5rem 0;       
-	text-align: center;
-	border-radius: 0 0 12px 12px; 
+	font-size: 1.5rem;
 	transition: background 0.3s ease;
 }
 
-.service-card:hover span {
-	background: #ffffff;
+.service-item summary:hover {
+	background-color: #eee;
+}
+
+/* remover seta padrão */
+.service-item summary::-webkit-details-marker {
+	display: none;
+}
+
+/* seta custom */
+.service-item summary::after {
+	content: "▾";
+	float: right;
+	transition: transform 0.3s ease;
+}
+
+.service-item[open] summary::after {
+	transform: rotate(180deg);
+}
+
+/* conteúdo do serviço */
+.service-content {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem 1.5rem;
+	background-color: white;
+	line-height: 1.6;
+	font-size: 1.2rem;
+	animation: fadeIn 0.3s ease;
+	color: black;
+	text-align: justify;
+}
+
+.service-text a,
+.service-text a:visited,
+.service-text a:hover,
+.service-text a:active {
+	text-decoration: none;
+	color: #636b2f; /* verde oliva */
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.service-text a:hover {
+	color: #b44388; /* cor de destaque ao passar o mouse */
+}
+
+/* animação simples */
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(-5px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* imagem do serviço dentro da caixa */
+.service-image {
+	width: 420px;         /* tamanho controlado */
+	height: auto;
+	object-fit: cover;
+	border-radius: 12px;
+	flex-shrink: 0;       /* não encolhe */
+}
+
+/* texto do serviço */
+.service-text {
+	flex: 1;              /* ocupa o restante da largura */
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+	.service-content {
+		flex-direction: column;
+		align-items: center;
+	}
+	.service-image {
+		width: 80px;
+	}
+	.service-text {
+		text-align: center;
+	}
 }
 
 /*====VERSION MOBILE===*/
