@@ -20,7 +20,7 @@ eleventyNavigation:
           <p> <strong>¡Entre en contacto!</strong><br>            
             Escríbenos: <a href="mailto:casa_mater22@gmail.com">casa_mater22@gmail.com</a><br>
             Síguenos en Instagram: <a href="https://www.instagram.com/casa_mater/" target="_blank">@casa_mater</a><br>
-            Para más novedades, visita <a href="/events/">Mater Day</a>.
+            Para más novedades, visita <a href="/events/">Eventos</a>.
           </p>
         </div>
       </div>
@@ -37,7 +37,7 @@ eleventyNavigation:
           <p> <strong>¡Entre en contacto!</strong><br>            
             Escríbenos: <a href="mailto:casa_mater22@gmail.com">casa_mater22@gmail.com</a><br>
             Síguenos en Instagram: <a href="https://www.instagram.com/casa_mater/" target="_blank">@casa_mater</a><br>
-            Para más novedades, visita <a href="/events/">Mater Day</a>.
+            Para más novedades, visita <a href="/events/">Eventos</a>.
           </p>
 
         </div>

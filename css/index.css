@@ -8,9 +8,9 @@
 	--text-color: #000000;       
 	
 	/* cores dos links do menu */
-	--menu-link-color: #b44388;          
-	--menu-link-color-active: #6e3d5b;   
-	--menu-link-color-visited: #b44388;
+	--menu-link-color: #8f1a5d;          
+	--menu-link-color-active: #f39ed2;   
+	--menu-link-color-visited: #8f1a5d;
 
 	--syntax-tab-size: 2;
 	}
@@ -20,9 +20,9 @@
 		--background-color: #ffffff;  
 		--text-color: #000000;        
 		
-		--menu-link-color: #b44388;
-		--menu-link-color-active: #6e3d5b;
-		--menu-link-color-visited: #b44388;
+		--menu-link-color: #8f1a5d;
+		--menu-link-color-active: #f39ed2;
+		--menu-link-color-visited: #8f1a5d;
 	}
 }
 
@@ -222,7 +222,7 @@ code {
 }
 
 .footer-contact .footer-link:hover {
-	color: #b44388; /* cor de destaque ao passar o mouse */
+	color: #8f1a5d; /* cor de destaque ao passar o mouse */
 }
 
 .footer-contact svg {
@@ -433,7 +433,7 @@ code {
 }
 
 .section-magenta {
-	background-color: #b44388; 
+	background-color: #8f1a5d; 
 	color: #ffffff;
 }
 
@@ -520,7 +520,7 @@ body .icon-circle {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-	background-color: #b44388; /* cor do círculo */
+	background-color: #8f1a5d; /* cor do círculo */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -730,7 +730,7 @@ body .actuacion-button .btn-primary:hover {
 .blog-date {
 	display: block;
 	margin: 0 1rem 0.5rem;
-	color: #b44388; /* ou outra cor de destaque */
+	color: #8f1a5d; /* ou outra cor de destaque */
 	font-size: 0.9rem;
 }
 
@@ -841,7 +841,7 @@ body .actuacion-button .btn-primary:hover {
 .event-date {
 	display: block;
 	margin: 0 1rem 0.5rem;
-	color: #b44388;
+	color: #8f1a5d;
 	font-size: 0.9rem;
 }
 
@@ -877,7 +877,7 @@ body.quienes-somos .about-quote p {
 }
 
 body.quienes-somos .quote-magenta {
-	color: #b44388;
+	color: #8f1a5d;
 	font-weight: 600;
 }
 
@@ -887,7 +887,7 @@ body.quienes-somos .quote-green {
 }
 
 body.quienes-somos .brand-highlight {
-	color: #b44388;
+	color: #8f1a5d;
 	font-weight: 500;
 	white-space: nowrap;
 	font-style: italic;
@@ -950,7 +950,7 @@ body.quienes-somos .about-text .page-title {
 	left: 2.5rem;
 	background: #ffffff;       
 	padding: 0.4rem 1.2rem;
-	color: #b44388;
+	color: #8f1a5d;
 	font-size: 1.8rem;
 	font-weight: 550;
 	border-radius: 999px;         
@@ -972,7 +972,7 @@ body.quienes-somos .about-split.reverse .page-title {
 	left: 2.5rem;
 	background: #ffffff;
 	padding: 0.5rem 1rem;
-	color: #b44388;
+	color: #8f1a5d;
 	font-size: 1.8rem;
 	font-weight: 550;
 	border-radius: 30px;          /* oval horizontal */
@@ -1169,7 +1169,7 @@ body.nuestros-servicios-y-actividades .page-title {
 }
 
 .service-text a:hover {
-	color: #b44388; /* cor de destaque ao passar o mouse */
+	color: #8f1a5d; /* cor de destaque ao passar o mouse */
 }
 
 /* animação simples */
@@ -1227,7 +1227,7 @@ body.nuestros-servicios-y-actividades .page-title {
 }
 
 .contact-page a:hover {
-	color: #b44388; /* cor de destaque ao passar o mouse */
+	color: #8f1a5d; /* cor de destaque ao passar o mouse */
 }
 
 /*====VERSION MOBILE===*/
