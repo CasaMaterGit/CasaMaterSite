@@ -35,7 +35,7 @@ eleventyNavigation:
       los cuerpos y las comunidades, invitándonos a comprender el cuidado 
       como un acto de dignidad y transformación.
     </p>
-    <p> <span class="brand-highlight">Fundadora de Casa Mater</span> </p>
+    <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
   </div>
 
 </div>
