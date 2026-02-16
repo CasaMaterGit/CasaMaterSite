@@ -1397,13 +1397,20 @@ body.nuestros-servicios-y-actividades .page-title {
 	.site-header {
 		padding: 0 1rem;
 		height: auto;
-		flex-direction: column;
-		align-items: flex-start;
+		flex-direction: row;
+		align-items: center;
 		gap: 0.5rem;
 	}
 
+	.site-logo {
+		display: flex;
+		align-items: center;
+	}
+
 	.site-logo img {
-		height: 20px; 
+		height: 50px;
+		width: auto;
+		display: block;
 	}
 
 	.nav {
@@ -1419,7 +1426,7 @@ body.nuestros-servicios-y-actividades .page-title {
 	.nav a {
 		display: block;
 		padding: 0.5rem 0;
-		font-size: 1rem; /* reduz fonte no mobile */
+		font-size: 0.7rem; /* reduz fonte no mobile */
 	}
 }
 
