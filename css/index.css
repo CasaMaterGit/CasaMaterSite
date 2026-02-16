@@ -431,12 +431,11 @@ code {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
-	color: #636b2f;
+	color: #8f1a5d;
 	font-size: clamp(2.5rem, 6vw, 5rem);
 	font-weight: 700;
 	letter-spacing: 0.2em;
 	text-align: center;
-
 	z-index: 2;
 	pointer-events: none; /* não atrapalha cliques */
 }
@@ -788,7 +787,17 @@ body .actuacion-button .btn-primary:hover {
 	padding-left: 1.2rem;
 }
 
-/*BLOG*/
+.nav-link {
+	color: #8f1a5d !important;        
+	text-decoration: none;  /* remove o sublinhado */
+	font-weight: bold;      /* opcional: deixa a palavra mais visível */
+	}
+
+.nav-link:hover {
+	opacity: 0.8;           /* opcional: efeito ao passar o mouse */
+}
+
+/*=======BLOG==========*/
 
 /* container deixa de ser grid */
 .blog-list {
@@ -832,7 +841,7 @@ body .actuacion-button .btn-primary:hover {
 
 /* seta > */
 .blog-card a::before {
-	content: ">";
+	content: "➤";
 	color: #636b2f; /* verde oliva */
 	font-weight: 700;
 	font-size: 1.2rem;
