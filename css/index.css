@@ -1659,6 +1659,29 @@ body.nuestros-servicios-y-actividades .page-title {
 		text-align:  center;
 		color: #636b2f;
 	}
+
+	.event-list {
+		display: grid;
+		grid-template-columns: 1fr;  /* 1 card por linha */
+		gap: 1rem;                   /* espaçamento entre os cards */
+		padding-left: 0;              /* encosta à esquerda */
+		padding-right: 0;             /* opcional, evita margem lateral */
+	}
+
+	/* Opcional: deixar os cards 100% da largura do container */
+	.event-card {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;                    /* remove margens internas que deslocam o card */
+	}
+
+	/* Ajustes internos do card para mobile */
+	.event-card h2,
+	.event-date,
+	.event-description {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
 }
 
 /* ===== PÁGINA QUIÉNES SOMOS – MOBILE ===== */
@@ -1725,7 +1748,7 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 
 	body.quienes-somos .about-split.reverse .page-title {
-		font-size: 1.2rem;          /* reduz o tamanho do texto */
+		font-size: 1rem;          /* reduz o tamanho do texto */
 		padding: 0.3rem 0.8rem;     /* diminui o padding da caixa */
 		width: auto;                /* largura mínima necessária */
 		max-width: 90%;             /* nunca ultrapassa a tela */
