@@ -867,6 +867,13 @@ body .actuacion-button .btn-primary:hover {
 	margin-bottom: 0.25rem;
 }
 
+.home-section .page-title-events {
+	margin-top: -6rem;
+	margin-bottom: 4rem;
+	text-align:  center;
+	color: #636b2f;
+}
+
 .event-date {
 	display: block;
 	text-align: center;
@@ -898,6 +905,7 @@ body .actuacion-button .btn-primary:hover {
 .event-content ol {
 	padding-left: 1.2rem;
 }
+
 
 /* ===== IMAGEM DO EVENTO ===== */
 .event-wrapper img {
@@ -1060,7 +1068,7 @@ body.quienes-somos
 
 body.quienes-somos .about-text .page-title {
 	position: absolute;
-	top: -2.2rem;               
+	top: -2.1rem;               
 	left: 2.5rem;
 	background: #ffffff;       
 	padding: 0.1rem 1rem;

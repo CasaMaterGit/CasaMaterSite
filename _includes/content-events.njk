@@ -1,7 +1,11 @@
 <section class="home-section reveal">
+
+  <h1 class="page-title-events">Eventos</h1>
+
   <div class="container">
 
     <div class="event-list">
+
       {%- for event in eventslist | reverse %}
         <article class="event-card">
           <a href="{{ event.url }}">
