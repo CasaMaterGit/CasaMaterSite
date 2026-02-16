@@ -1446,54 +1446,111 @@ body.nuestros-servicios-y-actividades .page-title {
 /* ====HOME – MOBILE ====== */
 @media (max-width: 768px) {
 
-  /* slider */
+	/* ===== HOME: SLIDER (MOBILE) ===== */
+
+	.hero-slider {
+		margin: 0; /* remove espaço extra */
+	}
+
 	.slide {
-		height: auto;          /* altura agora depende da imagem */
-		max-height: 70vh;      /* evita que fique gigante em telas muito altas */
-		overflow: hidden;
-		position: relative;
-		display: flex;         /* para centralizar verticalmente */
-		justify-content: center;
-		align-items: center;
-		padding: 0.1rem 0;     /* pequeno espaçamento top/bottom */
+		height: 55vh;           /* impacto visual sem exagero */
+		min-height: 320px;
+		max-height: 500px;
+		padding: 0;
 	}
 
 	.slide img {
-		width: 90%;            /* ocupa 90% da largura do slide */
-		height: auto;          /* mantém proporção */
-		object-fit: contain;   /* mostra a imagem inteira sem cortar */
-		display: block;
-		margin: 0 auto;        /* centraliza horizontalmente */
+		width: 100%;
+		height: 100%;
+		object-fit: cover;     /* mantém impacto visual */
+		opacity: 0.9;
+	}
+
+	/* overlay um pouco mais leve no mobile */
+	.slide::after {
+		background: rgba(0,0,0,0.3);
+	}
+
+	/* título */
+	.hero-title {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: clamp(1.6rem, 6vw, 2.4rem);
+		letter-spacing: 0.12em;
+		text-align: center;
+		padding: 0 1rem;
 	}
 
 	/* setas */
 	.arrow {
-		font-size: 2rem;
-		top: 50%;               /* centraliza verticalmente */
-		transform: translateY(-50%);
-		border-radius: 50%;
-		padding: 0.25rem 0.5rem;
-		color: #fff;
+		font-size: 1.8rem;
+		padding: 0.3rem 0.6rem;
 	}
 
+	.arrow.left {
+		left: 0.5rem;
+	}
+
+	.arrow.right {
+		right: 0.5rem;
+	}
+
+	/* dots */
 	.dots {
+		bottom: 0.8rem;
+	}
+
+	.dots .dot {
+		width: 9px;
+		height: 9px;
+	}
+
+}
+
+/* ===== HOME: NUESTRA VISIÓN (MOBILE) ===== */
+@media (max-width: 768px) {
+
+	.section-vision {
+		margin-top: -2rem;
+		margin-bottom: -2rem;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.section-vision .vision-panel {
+		background: none;
+		border-radius: 0;
+		min-height: auto;
 		display: flex;
+		align-items: center;
 		justify-content: center;
-		margin-top: 0.5rem;
+		padding: 2.5rem 1.2rem; /* menos espaço lateral */
 	}
 
-	.dot {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		background-color: #ccc;
-		margin: 0 4px;
-		border: none;
-		cursor: pointer;
+	.section-vision .vision-overlay {
+		background: none;
+		padding: 0;
+		max-width: 100%;
+		border-radius: 0;
+
+		text-align: center;
 	}
 
-	.dot.active {
-		background-color: #333;
+	.section-vision .vision-overlay .section-title {
+		font-size: 1.6rem;       /* menor no mobile */
+		margin-bottom: 0.8rem;
+		color: #636b2f;
+		line-height: 1.3;
+	}
+
+	.section-vision .vision-overlay .vision-text {
+		font-family: var(--font-family);
+		font-size: 1.15rem;      /* leitura confortável */
+		line-height: 1.6;
+		text-align: justify;
+		color: #000000;
+		padding: 0 0.2rem;       /* evita colar nas bordas */
 	}
 
 }
@@ -1621,7 +1678,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		width: auto;                /* largura mínima necessária */
 		max-width: 90%;             /* nunca ultrapassa a tela */
 		top: -1rem;               /* reposiciona para caber na tela */
-		left: 1rem;                 /* alinhamento lateral */
+		left: -1rem;                 /* alinhamento lateral */
 		border-radius: 20px;        /* mantém arredondado proporcional */
 		box-shadow: 0 0px 12px rgba(0,0,0,0.5); /* sombra ainda visível */
 		transform: translateX(30%);
@@ -1633,7 +1690,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		width: auto;                /* largura mínima necessária */
 		max-width: 90%;             /* nunca ultrapassa a tela */
 		top: -1rem;               /* reposiciona para caber na tela */
-		left: 1rem;                 /* alinhamento lateral */
+		left: -1rem;                 /* alinhamento lateral */
 		border-radius: 20px;        /* mantém arredondado proporcional */
 		box-shadow: 0 0px 12px rgba(0,0,0,0.5); /* sombra ainda visível */
 		transform: translateX(19%);
@@ -1697,7 +1754,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		border: none;
 	}
 
-	/* === Acordeão Mobile Ajustado === */
 	.about-accordion summary {
 		display: inline-flex;        /* título + seta na mesma linha */
 		justify-content: center;     /* centraliza horizontalmente */
