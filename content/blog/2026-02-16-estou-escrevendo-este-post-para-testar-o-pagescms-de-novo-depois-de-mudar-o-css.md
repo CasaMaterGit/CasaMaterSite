@@ -1,7 +1,6 @@
 ---
-title: "Estou escrevendo este post para testar o PAGESCMS de novo depois de
-  mudar o css "
-description: é um teste por cms
+title: Exemplo de Post
+description: teste descrição post
 date: 2026-02-16
 draft: false
 ---
