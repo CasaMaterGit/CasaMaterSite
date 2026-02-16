@@ -1421,6 +1421,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		height: 50px;
 		width: auto;
 		display: block;
+		object-fit: contain;
 	}
 
 	.nav {
@@ -1544,7 +1545,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2.5rem 1.2rem; /* menos espaço lateral */
+		padding: 2rem 0rem; /* menos espaço lateral */
 	}
 
 	.section-vision .vision-overlay {
