@@ -776,7 +776,7 @@ body .actuacion-button .btn-primary:hover {
 .post-content {
 	text-align: justify;
 	line-height: 1.9;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 
 /* espaçamento melhor para markdown */
@@ -906,7 +906,7 @@ body .actuacion-button .btn-primary:hover {
 .event-content {
 	text-align: justify;
 	line-height: 1.9;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	font-family: inherit; /* mesma fonte do root */
 }
 
