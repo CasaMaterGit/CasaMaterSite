@@ -452,9 +452,14 @@ code {
 
 /* ===== HOME: SECTIONS GERAL ===== */
 
-.home-section {
+.home-section:first-of-type {
 	width: 100%;
 	padding: 6rem 1.5rem;
+}
+
+.home-section {
+	width: 100%;
+	padding: 3rem 1.5rem;
 }
 
 .section-white {
@@ -877,7 +882,7 @@ body .actuacion-button .btn-primary:hover {
 
 .home-section .page-title-events {
 	margin-top: -6rem;
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 	text-align:  center;
 	color: #636b2f;
 }
@@ -1386,9 +1391,14 @@ body.nuestros-servicios-y-actividades .page-title {
 		height: auto;
 	}
 
-	section,
+	.home-section:first-of-type {
+		width: 100%;
+		padding: 1rem 1.5rem;
+	}
+
 	.home-section {
-		padding: 3rem 1rem;
+		width: 100%;
+		padding: 1rem 1.5rem;
 	}
 }
 
@@ -1421,12 +1431,16 @@ body.nuestros-servicios-y-actividades .page-title {
 
 	.nav-item {
 		width: 100%;
+		
 	}
 
 	.nav a {
 		display: block;
 		padding: 0.5rem 0;
-		font-size: 0.7rem; /* reduz fonte no mobile */
+		font-size: 0.8rem;
+		text-align: center; /* reduz fonte no mobile */
+		line-height: 1;             /* remove espaço fantasma da fonte */
+		padding: 0;
 	}
 }
 
@@ -1452,8 +1466,6 @@ body.nuestros-servicios-y-actividades .page-title {
 
 /* ====HOME – MOBILE ====== */
 @media (max-width: 768px) {
-
-	/* ===== HOME: SLIDER (MOBILE) ===== */
 
 	.hero-slider {
 		margin: 0; /* remove espaço extra */
@@ -1519,8 +1531,8 @@ body.nuestros-servicios-y-actividades .page-title {
 @media (max-width: 768px) {
 
 	.section-vision {
-		margin-top: -2rem;
-		margin-bottom: -2rem;
+		margin-top: -1rem;
+		margin-bottom: -1rem;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
@@ -1540,7 +1552,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		padding: 0;
 		max-width: 100%;
 		border-radius: 0;
-
 		text-align: center;
 	}
 
@@ -1579,9 +1590,15 @@ body.nuestros-servicios-y-actividades .page-title {
 
 /* ===== TESTIMONIOS – MOBILE ===== */
 @media (max-width: 768px) {
+
+	.section-title {
+		padding-top:3rem;
+	}
 	.testimonials {
 		grid-template-columns: 1fr; /* um depoimento por linha */
 		gap: 2rem;
+		padding-top: 0.5rem;
+		padding-bottom: 4rem;
 	}
 
 	.testimonial {
@@ -1601,6 +1618,7 @@ body.nuestros-servicios-y-actividades .page-title {
 	.gallery-track {
 		display: flex;
 		gap: 0.75rem;
+		padding: 1rem;
 	}
 
 	.gallery-item {
@@ -1619,6 +1637,7 @@ body.nuestros-servicios-y-actividades .page-title {
 /* ========= COLABORADORAS  MOBILE ======= */
 /* responsivo */
 @media (max-width: 900px) {
+
 	#colaboradores .partners-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -1630,12 +1649,25 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 }
 
+/* ===== POSTS e EVENTOS LIST – MOBILE ===== */
+
+@media (max-width: 768px) {
+	.home-section .page-title-events {
+		margin-top: -2rem;
+		margin-bottom: 2rem;
+		text-align:  center;
+		color: #636b2f;
+	}
+}
+
 /* ===== PÁGINA QUIÉNES SOMOS – MOBILE ===== */
 
 @media (max-width: 768px) {
+
   /* Seções principais */
 	body.quienes-somos .home-section {
-		padding: 2rem 0;
+		padding-top: 0.01rem; /* ou 1rem, ajuste fino */
+		padding-bottom: 0.1rem; /* mantém espaçamento inferior */
 	}
 
 	/* Quote */
@@ -1813,11 +1845,20 @@ body.nuestros-servicios-y-actividades .page-title {
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.service-image {
 		width: 400px;
 	}
+
 	.service-text {
 		text-align: center;
+	}
+
+	body.nuestros-servicios-y-actividades .page-title {
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		text-align:  center;
+		color: #636b2f;
 	}
 }
 
