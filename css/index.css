@@ -1789,7 +1789,8 @@ body.nuestros-servicios-y-actividades .page-title {
 	/* Texto principal */
 	body.quienes-somos .about-text {
 		position: relative;
-		padding: 1.2rem 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		font-size: 1.05rem;
 		line-height: 1.6;
 		text-align: justify;
@@ -1833,7 +1834,9 @@ body.nuestros-servicios-y-actividades .page-title {
 		background-color: white;
 		color: black;
 		width: 100%;
-		padding: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 1rem;
 		border-radius: 30px;
 		font-size: 1.1rem;
 		line-height: 1.7;
