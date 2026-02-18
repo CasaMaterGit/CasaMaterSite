@@ -57,6 +57,7 @@ body {
 
 main {
 	width: 100%;
+	min-height: calc(100vh - 150px);
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -115,6 +116,7 @@ main,
 footer {
 	padding: 1rem;
 }
+
 main :first-child {
 	margin-top: 0;
 }
@@ -660,7 +662,6 @@ body .actuacion-button .btn-primary:hover {
 	transform: rotate(180deg);
 }
 
-
 /* ===== HOME: GALERIA CARROSSEL ===== */
 
 .gallery-slider {
@@ -712,7 +713,8 @@ body .actuacion-button .btn-primary:hover {
 #colaboradores.section-white {
 	border-radius: 24px;
 	margin: 2rem auto;
-	padding: 3rem 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	max-width: 1200px;
 }
 
@@ -800,8 +802,13 @@ body .actuacion-button .btn-primary:hover {
 	display: block;
 	text-align: center;
 	font-size: 0.95rem;
-	opacity: 0.7;
 	margin-bottom: 2.5rem;
+}
+
+.post-wrapper .post-date {
+	text-align: center;
+	padding: 1rem;
+	color: #8f1a5d;
 }
 
 .post-content {
@@ -938,10 +945,14 @@ body .actuacion-button .btn-primary:hover {
 
 .event-date {
 	display: block;
-	text-align: center;
+	text-align: left;
 	font-size: 0.95rem;
-	opacity: 0.7;
 	margin-bottom: 2.5rem;
+}
+
+.event-wrapper .event-date {
+	text-align: center;
+	padding: 1rem;
 }
 
 .event-content {
@@ -1585,6 +1596,8 @@ body.nuestros-servicios-y-actividades .page-title {
 		margin-bottom: -1rem;
 		padding-top: 0;
 		padding-bottom: 0;
+		padding-left: 0.1rem;
+		padding-right: 0.1rem;
 	}
 
 	.section-vision .vision-panel {
@@ -1644,11 +1657,10 @@ body.nuestros-servicios-y-actividades .page-title {
 	.section-title {
 		padding-top:3rem;
 	}
+
 	.testimonials {
 		grid-template-columns: 1fr; /* um depoimento por linha */
 		gap: 2rem;
-		padding-top: 0.5rem;
-		padding-bottom: 4rem;
 	}
 
 	.testimonial {
@@ -1685,7 +1697,7 @@ body.nuestros-servicios-y-actividades .page-title {
 }
 
 /* ========= COLABORADORAS  MOBILE ======= */
-/* responsivo */
+
 @media (max-width: 900px) {
 
 	#colaboradores .partners-grid {
@@ -1763,7 +1775,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		flex-direction: column;
 		gap: 2rem;
 		margin-bottom: 4rem;
-		padding: 0 1.2rem;
+		padding: 0 0.1rem;
 	}
 
 	body.quienes-somos .about-split.reverse {
@@ -1771,7 +1783,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		flex-direction: column;
 		gap: 2rem;
 		margin-bottom: 4rem;
-		padding: 0 1.2rem;
+		padding: 0 0.1rem;
 	}
 
 	/* Texto principal */
