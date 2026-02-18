@@ -572,7 +572,7 @@ body .actuacion-button {
 
 body .actuacion-button .btn-primary {
 	display: inline-block;
-	background-color: #636b2f;
+	background-color: #8f1a5d;
 	color: #fff;
 	padding: 0.8rem 2rem;
 	font-weight: 400;
@@ -583,7 +583,7 @@ body .actuacion-button .btn-primary {
 }
 
 body .actuacion-button .btn-primary:hover {
-	background-color: #344230;
+	background-color: #b44388;
 }
 
 /* ===== HOME: DEPOIMENTOS ===== */
@@ -608,18 +608,58 @@ body .actuacion-button .btn-primary:hover {
 	color: white;
 	padding: 1.5rem;
 	border-radius: 8px;
+	text-align: justify;
+
 }
 
 .testimonial h3 {
 	margin: 0 0 0.75rem 0;
-	font-size: 1rem;
-	font-weight: 700;
+	font-size: 1.2rem;
+	font-weight: 550;
+	font-style: italic;
 }
 
+/* Texto do depoimento */
 .testimonial p {
 	font-size: 0.95rem;
 	line-height: 1.5;
+	display: -webkit-box;
+	-webkit-line-clamp: 10;      /* número de linhas */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
 }
+
+/* Quando estiver aberto */
+.testimonial.open p {
+	-webkit-line-clamp: unset;
+	overflow: visible;
+}
+
+/* botão ler mais */
+.read-more {
+	margin-top: 0.75rem;
+	background: none;
+	border: none;
+	color: #ffffff;
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.read-more span {
+	font-size: 1.2rem;
+	transition: transform 0.3s ease;
+}
+
+/* seta gira quando abre */
+.testimonial.open .read-more span {
+	transform: rotate(180deg);
+}
+
 
 /* ===== HOME: GALERIA CARROSSEL ===== */
 

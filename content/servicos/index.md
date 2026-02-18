@@ -67,12 +67,7 @@ eleventyNavigation:
         <div class="service-text">
           <p> 
             DESCRIPCION DESCRIPCION DESCRIPCIONDESCRIPCION
-            DESCRIPCION DESCRIPCION DESCRIPCIONDESCRIPCIONDESCRIPCION
-            DESCRIPCIONDESCRIPCIONDESCRIPCIONDESCRIPCIONDESCRIPCIONDESCRIPCION
-            DESCRIPCION
-            DESCRIPCION
-            DESCRIPCION
-            DESCRIPCION 
+            DESCRIPCION DESCRIPCION DESCRIPCION 
           </p>
           <p> <strong>¡Entre en contacto!</strong><br>            
             Escríbenos: <a href="mailto:casa_mater22@gmail.com">casa_mater22@gmail.com</a><br>

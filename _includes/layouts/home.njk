@@ -56,7 +56,7 @@ layout: layouts/base.njk
           <img src="/img/icon1.png" alt="Icono 1" eleventy:ignore>
         </div>
         <h3>Maternidad, Salud y Derechos Reproductivos</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
       </div>
 
       <!-- ITEM 2 -->
@@ -65,7 +65,7 @@ layout: layouts/base.njk
           <img src="/img/icon2.png" alt="Icono 2" eleventy:ignore>
         </div>
         <h3>Inclusión y Protección Social de la Maternidad</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
       </div>
 
       <!-- ITEM 3 -->
@@ -74,7 +74,7 @@ layout: layouts/base.njk
           <img src="/img/icon3.png" altpng="Icono 3" eleventy:ignore>
         </div>
         <h3>Políticas de Salud, Igualdad y Cuidados</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
       </div>
     </div>
 
@@ -91,30 +91,55 @@ layout: layouts/base.njk
 
     <div class="testimonials">
       <article class="testimonial">
-        <h3>Nome </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+        <h3> Juanna </h3>
+        <p>
+          "Mi experiencia con Juliana en mi segundo embarazo y parto ha sido completamente maravillosa. Durante todo el embarazo porque a través de su acompañamiento dulce pero a la vez muy motivador te va empoderando y haciendo que cojas más confianza en tí misma, eso sumado a que se trataba de mi segundo embarazo y ya saber de qué va junto a su cálido acompañamiento ha hecho que recuerde el período del embarazo como los más bonitos, pausados y conscientes de toda mi vida. 
+          Por otro lado en el parto en movimiento, la llamé en cuanto rompí aguas y no dudó en acudir a nuestra casa y mediante música tranquila, muchos mimos y mucha consciencia hizo que la oxitocina se disparase y al fomentar la conexión entre mi marido y yo las contracciones se dispararon y todo fue genial, el parto que había imaginado gracias a su motivación, acompañamiento y sencillez creó un espacio seguro en el que nació mi hija."
         </p>
+        <button class="read-more">
+        Leer más <span>▾</span>
+        </button>      
+
+      </article>
+
+      <article class="testimonial">
+        <h3>Nome </h3>
+        <p>
+        "Como padre la verdad que estoy muy agradecido por la gran labor que hizo Juliana, el venir a casa y ayudar en todo momento y preveer también, como indicarme en un momento que ella vió que preparase el coche y cómo prepararlo, en medio de nervios y no saber cómo actuar ella hace de puente entre la organización y la previsión utilizando la cabeza fría para indicarme cómo proceder,  y el estar emocionalmente disponible para mi mujer como en ese momento estuvo. Muy agradecido de que estuviese con nosotros en ese momento tan especial."
+        </p>
+        <button class="read-more">
+        Leer más <span>▾</span>
+        </button>      
+
+      </article>
+
+      <article class="testimonial">
+        <h3> Noelia </h3>
+        <p>
+        "Juliana es muy amable y atenta.Te hace sentir cómoda, explica todo con cariño y hace que parezca fácil. Muchas gracias por tu trabajo."
+        </p>
+        <button class="read-more">
+        Leer más <span>▾</span>
+        </button>      
+
+      </article>
+
+      <article class="testimonial">
+        <h3> Maria del Mar </h3>
+        <p>
+        "Nyddya me atendió en mi tercer parto junto con la doula Juliana Alves, que fue en casa. Son unas grandes profesionales, cercanas, atentas y respetuosas; justo lo que se necesita en ese momento. Fue un sueño hecho realidad." 
+        </p>
+        <button class="read-more">
+        Leer más <span>▾</span>
+        </button>      
       </article>
 
       <article class="testimonial">
         <h3>Nome </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-      </article>
-
-      <article class="testimonial">
-        <h3>Nome </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-      </article>
-
-      <article class="testimonial">
-        <h3>Nome </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-      </article>
-
-      <article class="testimonial">
-        <h3>Nome </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        <button class="read-more">
+        Leer más <span>▾</span>
+        </button>      
       </article>
     </div>
   </div>
@@ -192,7 +217,7 @@ layout: layouts/base.njk
   </div>
 
   <div class="partner-item">
-    <a href="" target="_blank" rel="noopener">
+    <a href="https://marta-tf.es/" target="_blank" rel="noopener">
       <div class="partner-circle">
         <img src="/img/colab5.jpg" alt="María Fuentes" eleventy:ignore>
       </div>
@@ -270,7 +295,28 @@ document.addEventListener("DOMContentLoaded", () => {
   createDots();
   updateSlider(false);
 });
-
-
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.testimonial').forEach(card => {
+    const text = card.querySelector('p');
+    const button = card.querySelector('.read-more');
 
+    if (!button) return;
+
+    /* só mostra o botão se o texto for maior */
+    if (text.scrollHeight <= text.clientHeight + 5) {
+      button.style.display = 'none';
+      return;
+    }
+
+    button.addEventListener('click', () => {
+      card.classList.toggle('open');
+
+      button.innerHTML = card.classList.contains('open')
+        ? 'Leer menos <span>▴</span>'
+        : 'Leer más <span>▾</span>';
+    });
+  });
+});
+</script>
