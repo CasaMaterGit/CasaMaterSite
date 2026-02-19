@@ -11,6 +11,10 @@ hideTitle: true
       {{ page.date | readableDate }}
     </time>
 
+    {% if image %}
+      <img src="{{ image | replace('/public', '') }}" alt="{{ title }}" class="event-image" eleventy:ignore>
+    {% endif %}
+
     <article class="post-content">
       {{ content | safe }}
     </article>
