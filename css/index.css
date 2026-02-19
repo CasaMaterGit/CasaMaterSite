@@ -523,6 +523,13 @@ code {
 }
 
 /* ===== HOME: ATUACIÓN ===== */
+.section-title-ac {
+	color:#8f1a5d;
+	font-size: 2rem;
+	margin-bottom: 7rem;
+	text-align: center;
+}
+
 body .actuacion-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -918,6 +925,12 @@ body .actuacion-button .btn-primary:hover {
 	background-color: rgba(99, 107, 47, 0.05);
 }
 
+.post-wrapper img {
+	width: 100%;             /* ocupa toda a largura do wrapper */
+	border-radius: 16px;     
+	margin-bottom: 1.8rem;   
+	display: block;         
+}
 
 /* ===== EVENTOS ===== */
 
@@ -1376,7 +1389,7 @@ body.nuestros-servicios-y-actividades .page-title {
 /* imagem do serviço dentro da caixa */
 .service-image {
 	width: 420px;         /* tamanho controlado */
-	height: auto;
+	height: 300px;
 	object-fit: cover;
 	border-radius: 12px;
 	flex-shrink: 0;       /* não encolhe */

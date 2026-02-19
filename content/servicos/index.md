@@ -63,11 +63,10 @@ eleventyNavigation:
     <details class="service-item">
       <summary>Investigación</summary>
       <div class="service-content">
-        <img src="/img/investigacion.jpg" alt="Investigación" class="service-image" eleventy:ignore>
+        <img src="/img/investigacion.png" alt="Investigación" class="service-image" eleventy:ignore>
         <div class="service-text">
           <p> 
-            DESCRIPCION DESCRIPCION DESCRIPCIONDESCRIPCION
-            DESCRIPCION DESCRIPCION DESCRIPCION 
+            Casa Mater desarrolla un trabajo académico y de investigación científica enfocado en la perinatalidad, los derechos sexuales y reproductivos, y la transformación cultural del nacimiento. Hemos colaborado con la Universidad Nebrija en estudios sobre derechos sexuales y violencia obstétrica, y con la Universidad de Cádiz en torno a la Declaración de la Partería de la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad. Actualmente, participamos en un proyecto de investigación con la Universidad Complutense de Madrid sobre la regeneración del parto, la autonomía de las mujeres y sus derechos, además de presentar y compartir nuestros hallazgos en eventos científicos nacionales e internacionales, contribuyendo al avance del conocimiento y la práctica respetuosa en la maternidad.
           </p>
           <p> <strong>¡Entre en contacto!</strong><br>            
             Escríbenos: <a href="mailto:casa_mater22@gmail.com">casa_mater22@gmail.com</a><br>
