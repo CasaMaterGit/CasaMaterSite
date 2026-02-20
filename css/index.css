@@ -266,6 +266,7 @@ code {
 	height: 80px;
 	width: auto;
 	display: block;
+	padding: 7px;
 }
 
 /* menu */
@@ -429,12 +430,27 @@ code {
 
 .hero-title {
 	position: absolute;
-	top: 37%;
+	top: 32%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
 	color: #8f1a5d;
 	font-size: clamp(2.5rem, 6vw, 5rem);
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-align: center;
+	z-index: 2;
+	pointer-events: none; /* não atrapalha cliques */
+}
+
+.hero-subtitle {
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 4px 4px 4px rgba(0,0,0,0.8);
+	color: #636b2f;
+	font-size: 1.9rem;
 	font-weight: 700;
 	letter-spacing: 0.2em;
 	text-align: center;
@@ -489,10 +505,8 @@ code {
 	background-image: none;        /* REMOVE a imagem */
 	background-size: initial;
 	background-position: initial;
-
 	border-radius: 0;              /* opcional */
 	min-height: auto;              /* REMOVE altura forçada */
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -513,7 +527,6 @@ code {
 	color: #636b2f;
 }
 
-
 .section-vision .vision-overlay .vision-text {
 	font-family: var(--font-family);
 	font-size: 1.5rem;
@@ -526,8 +539,24 @@ code {
 .section-title-ac {
 	color:#8f1a5d;
 	font-size: 2rem;
-	margin-bottom: 7rem;
+	margin-bottom: 2rem;
 	text-align: center;
+}
+
+body .p-actuacion {
+	font-family: var(--font-family);
+	font-size: 1.5rem;
+	line-height: 1.7;
+	text-align: justify;
+	color: #000000;
+	padding: 2rem;
+	padding-bottom: 3.5rem;
+}
+
+body .p-actuacion .brand-highlight{
+	color: #8f1a5d;
+	font-weight: 600;
+	white-space: nowrap;
 }
 
 body .actuacion-grid {
@@ -594,6 +623,7 @@ body .actuacion-button .btn-primary {
 body .actuacion-button .btn-primary:hover {
 	background-color: #b44388;
 }
+
 
 /* ===== HOME: DEPOIMENTOS ===== */
 
