@@ -4,37 +4,53 @@ content:
   - name: home
     label: Home
     type: file
-    path: content/home/index.md
+    path: content/index.njk
     fields:
+
       - { name: title, label: Título, type: string }
 
+      # ===== SLIDER =====
       - name: slides
         label: Slider
-        type: list
+        type: object
+        list: true
         fields:
           - { name: image, label: Imagem, type: image, required: true }
           - { name: title, label: Título, type: string }
           - { name: subtitle, label: Subtítulo, type: string }
 
+      # ===== ATUACIÓN =====
+      - { name: actuacion_title, label: Título Atuación, type: string }
+      - { name: actuacion_text, label: Texto Atuación, type: text }
+
       - name: actuacion
-        label: Atuación
-        type: list
+        label: Itens de Atuación
+        type: object
+        list: true
         fields:
           - { name: icon, label: Ícone, type: image }
           - { name: title, label: Título, type: string }
-          - { name: text, label: Texto, type: text }
 
+      # ===== VISIÓN =====
+      - { name: vision_title, label: Título Visión, type: string }
+      - { name: vision_text, label: Texto Visión, type: text }
+
+      # ===== TESTIMONIOS =====
       - name: testimonials
         label: Testimonios
-        type: list
+        type: object
+        list: true
         fields:
           - { name: name, label: Nome, type: string }
           - { name: text, label: Texto, type: text }
 
+      # ===== GALERIA =====
       - name: gallery
         label: Galeria
-        type: list
-        field: { name: image, label: Imagem, type: image }
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Imagem, type: image }
 
   # === Contato ===
   - name: contato
