@@ -2,74 +2,40 @@
 layout: layouts/base.njk
 ---
 
-<section id="slider" class="hero-slider">
+<!-- ===== SLIDER ===== -->
+<section class="hero-slider">
   <div class="slider-container">
- 
-  <!-- setas laterais -->
-  <button class="arrow left" aria-label="Slide anterior">‹</button>
-  <button class="arrow right" aria-label="Próximo slide">›</button>
+    <button class="arrow left">‹</button>
+    <button class="arrow right">›</button>
+    <div class="dots"></div>
 
-  <!-- bolinhas -->
-  <div class="dots"></div>
-   
     <div class="slider-track">
+      {% for slide in slides %}
       <div class="slide">
-        <img src="/img/hero1.png" alt="Slide 1" eleventy:ignore>
-        <h1 class = "hero-title"> CASA MATER </h1>
-          <h2 class="hero-subtitle"> Transformando la cultura de nacer </h2>
-
+        <img src="{{ slide.image }}" alt="{{ slide.title }}" eleventy:ignore>
+        <h1 class="hero-title">{{ slide.title }}</h1>
+        <h2 class="hero-subtitle">{{ slide.subtitle }}</h2>
       </div>
-      <div class="slide">
-        <img src="/img/hero2.png" alt="Slide 2" eleventy:ignore>
-        <h1 class = "hero-title"> CASA MATER </h1>
-          <h2 class="hero-subtitle"> Transformando la cultura de nacer </h2>
-
-      </div>
-      <div class="slide">
-        <img src="/img/hero3.png" alt="Slide 3" eleventy:ignore>
-        <h1 class = "hero-title"> CASA MATER </h1>
-          <h2 class="hero-subtitle"> Transformando la cultura de nacer </h2>
-
-      </div>
+      {% endfor %}
     </div>
   </div>
-
 </section>
 
-<!-- ===== faixa 3: ATUACIÓN ===== -->
-<section id="actuacion" class="home-section section-white reveal">
+<!-- ===== ATUACIÓN ===== -->
+<section class="home-section section-white reveal">
   <div class="container">
-    <h2 class="section-title-ac">Nuestras líneas de actuación</h2>
-      <p class = "p-actuacion"><span class="brand-highlight">Casa Mater</span> es una asociación sin ánimo de lucros dedicada a transformar la forma en que nacemos, con un enfoque feminista, intercultural y sostenible. Ofrece programas y grupos de apoyo para embarazadas y puérperas, encuentros de lactancia, talleres y eventos comunitarios sobre perinatalidad, derechos reproductivos y sexuales, y genera investigación científica para mejorar prácticas y políticas de cuidado.
-      Combina innovación social, educación y evidencia científica para crear una comunidad de transformación, donde la información, el acompañamiento y la experiencia de cada mujer son la base de un cambio cultural profundo en la maternidad y los cuidados de la vida. Nuestras líneas de actuación son:
-      </p>
+    <h2 class="section-title-ac">{{ actuacion_title }}</h2>
+    <p class="p-actuacion">{{ actuacion_text }}</p>
+
     <div class="actuacion-grid">
-      <!-- ITEM 1 -->
+      {% for item in actuacion %}
       <div class="actuacion-item">
         <div class="icon-circle">
-          <img src="/img/icon1.png" alt="Icono 1" eleventy:ignore>
+          <img src="{{ item.icon }}" alt="{{ item.title }}" eleventy:ignore>
         </div>
-        <h3>Maternidad, Salud y Derechos Reproductivos</h3>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
+        <h3>{{ item.title }}</h3>
       </div>
-
-      <!-- ITEM 2 -->
-      <div class="actuacion-item">
-        <div class="icon-circle">
-          <img src="/img/icon2.png" alt="Icono 2" eleventy:ignore>
-        </div>
-        <h3>Inclusión y Protección Social de la Maternidad</h3>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
-      </div>
-
-      <!-- ITEM 3 -->
-      <div class="actuacion-item">
-        <div class="icon-circle">
-          <img src="/img/icon3.png" altpng="Icono 3" eleventy:ignore>
-        </div>
-        <h3>Políticas de Salud, Igualdad y Cuidados</h3>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Breve descripción del área.</p> -->
-      </div>
+      {% endfor %}
     </div>
 
     <div class="actuacion-button">
@@ -78,162 +44,54 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<!-- faixa 2 - Nuestra visión -->
+<!-- ===== VISIÓN ===== -->
 <section class="home-section section-vision reveal">
   <div class="vision-panel">
     <div class="vision-overlay">
-      <h2 class="section-title">Nuestra Visión</h2>
-      <p class="vision-text">
-      Soñamos con una sociedad donde la maternidad y el nacimiento sean reconocidos y sostenidos colectivamente como pilares de la vida y el futuro de las comunidades, donde madres, familias y criaturas vivan con dignidad, bienestar y derechos garantizados. Creemos en la regeneración del parto y el nacimiento: transformar cómo llegamos al mundo para fortalecer la salud, los vínculos y la confianza social, integrando ciencia, humanidad y dignidad, y poniendo la vida en el centro. Cuidar bien el inicio de la vida no solo impacta a cada familia, sino que siembra las bases de comunidades más justas, cuidadoras y fuertes para las próximas generaciones.
-      </p>
+      <h2 class="section-title">{{ vision_title }}</h2>
+      <p class="vision-text">{{ vision_text }}</p>
     </div>
   </div>
 </section>
 
-
-<!-- faixa 4 – Depoimentos -->
-<section id="depoimentos" class="home-section section-white reveal">
+<!-- ===== TESTIMONIOS ===== -->
+<section class="home-section section-white reveal">
   <div class="container">
     <h2 class="section-title">Experiencias</h2>
 
     <div class="testimonials">
+      {% for t in testimonials %}
       <article class="testimonial">
-        <h3> Juanna </h3>
-        <p>
-          "Mi experiencia con Juliana en mi segundo embarazo y parto ha sido completamente maravillosa. Durante todo el embarazo porque a través de su acompañamiento dulce pero a la vez muy motivador te va empoderando y haciendo que cojas más confianza en tí misma, eso sumado a que se trataba de mi segundo embarazo y ya saber de qué va junto a su cálido acompañamiento ha hecho que recuerde el período del embarazo como los más bonitos, pausados y conscientes de toda mi vida. 
-          Por otro lado en el parto en movimiento, la llamé en cuanto rompí aguas y no dudó en acudir a nuestra casa y mediante música tranquila, muchos mimos y mucha consciencia hizo que la oxitocina se disparase y al fomentar la conexión entre mi marido y yo las contracciones se dispararon y todo fue genial, el parto que había imaginado gracias a su motivación, acompañamiento y sencillez creó un espacio seguro en el que nació mi hija."
-        </p>
+        <h3>{{ t.name }}</h3>
+        <p>{{ t.text }}</p>
         <button class="read-more">
-        Leer más <span>▾</span>
-        </button>      
-
+          Leer más <span>▾</span>
+        </button>
       </article>
-
-      <article class="testimonial">
-        <h3> Miguel </h3>
-        <p>
-        "Como padre la verdad que estoy muy agradecido por la gran labor que hizo Juliana, el venir a casa y ayudar en todo momento y preveer también, como indicarme en un momento que ella vió que preparase el coche y cómo prepararlo, en medio de nervios y no saber cómo actuar ella hace de puente entre la organización y la previsión utilizando la cabeza fría para indicarme cómo proceder,  y el estar emocionalmente disponible para mi mujer como en ese momento estuvo. Muy agradecido de que estuviese con nosotros en ese momento tan especial."
-        </p>
-        <button class="read-more">
-        Leer más <span>▾</span>
-        </button>      
-
-      </article>
-
-      <article class="testimonial">
-        <h3> Noelia </h3>
-        <p>
-        "Juliana es muy amable y atenta.Te hace sentir cómoda, explica todo con cariño y hace que parezca fácil. Muchas gracias por tu trabajo."
-        </p>
-        <button class="read-more">
-        Leer más <span>▾</span>
-        </button>      
-
-      </article>
-
-      <article class="testimonial">
-        <h3> Maria del Mar </h3>
-        <p>
-        "Nyddya me atendió en mi tercer parto junto con la doula Juliana Alves, que fue en casa. Son unas grandes profesionales, cercanas, atentas y respetuosas; justo lo que se necesita en ese momento. Fue un sueño hecho realidad." 
-        </p>
-        <button class="read-more">
-        Leer más <span>▾</span>
-        </button>      
-      </article>
-
-      <article class="testimonial">
-        <h3>Nome </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-        <button class="read-more">
-        Leer más <span>▾</span>
-        </button>      
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- faixa 5 – Galeria -->
-<section id="galeria" class="home-section section-white reveal">
+<!-- ===== GALERIA ===== -->
+<section class="home-section section-white reveal">
   <div class="container">
     <div class="gallery-slider">
-      <button class="gallery-arrow left" aria-label="Anterior">‹</button>
+      <button class="gallery-arrow left">‹</button>
 
       <div class="gallery-viewport">
         <div class="gallery-track">
+          {% for g in gallery %}
           <div class="gallery-item">
-            <img src="/img/foto1.jpg" alt="Foto 1" eleventy:ignore>
+            <img src="{{ g.image }}" alt="Galería" eleventy:ignore>
           </div>
-          <div class="gallery-item">
-            <img src="/img/foto2.jpg" alt="Foto 2" eleventy:ignore>
-          </div>
-          <div class="gallery-item">
-            <img src="/img/foto3.jpg" alt="Foto 3" eleventy:ignore>
-          </div>
-          <div class="gallery-item">
-            <img src="/img/foto4.jpg" alt="Foto 4" eleventy:ignore>
-          </div>
-          <div class="gallery-item">
-            <img src="/img/foto5.jpg" alt="Foto 5" eleventy:ignore>
-          </div>
+          {% endfor %}
         </div>
       </div>
 
-      <button class="gallery-arrow right" aria-label="Próximo">›</button>
+      <button class="gallery-arrow right">›</button>
     </div>
   </div>
-</section>
-
-<!-- faixa 6 – Nossos colaboradores -->
-<section id="colaboradores" class="home-section section-white reveal">
-  <h2 class="section-title">Nuestras colaboradoras</h2>
-  <div class="partners-grid">
-  <div class="partner-item">
-    <a href="https://www.buildyournestworkbook.com/portugues" target="_blank" rel="noopener">
-      <div class="partner-circle">
-        <img src="/img/colab1.jpg" alt="Kestrel Gates" eleventy:ignore>
-      </div>
-      <h3 class="partner-name">Kestrel Gates</h3>
-    </a>
-  </div>
-
-  <div class="partner-item">
-    <a href="https://www.instagram.com/nyddyaconesa.comadrona/" target="_blank" rel="noopener">
-      <div class="partner-circle">
-        <img src="/img/colab2.jpg" alt="Nyddya Conesa" eleventy:ignore>
-      </div>
-      <h3 class="partner-name">Nyddya Conesa</h3>
-    </a>
-  </div>
-
-  <div class="partner-item">
-    <a href="https://www.instagram.com/pilatesymasjerez/" target="_blank" rel="noopener">
-      <div class="partner-circle">
-        <img src="/img/colab3.jpg" alt="Mar Doña" eleventy:ignore>
-      </div>
-      <h3 class="partner-name">Mar Doña</h3>
-    </a>
-  </div>
-
-  <div class="partner-item">
-    <a href="https://www.instagram.com/casa.ruda/" target="_blank" rel="noopener">
-      <div class="partner-circle">
-        <img src="/img/colab4.jpg" alt="Lúcia Misael" eleventy:ignore>
-      </div>
-      <h3 class="partner-name">Lúcia Misael</h3>
-    </a>
-  </div>
-
-  <div class="partner-item">
-    <a href="https://marta-tf.es/" target="_blank" rel="noopener">
-      <div class="partner-circle">
-        <img src="/img/colab5.jpg" alt="María Fuentes" eleventy:ignore>
-      </div>
-      <h3 class="partner-name">María Fuentes</h3>
-    </a>
-  </div>
-
-</div>
-
 </section>
 
 <script>
