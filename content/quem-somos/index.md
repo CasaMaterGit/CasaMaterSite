@@ -35,6 +35,39 @@ eleventyNavigation:
       los cuerpos y las comunidades, invitándonos a comprender el cuidado 
       como un acto de dignidad y transformación.
     </p>
+    <p class="founder"> <span class="brand-highlight"> - Fundadora y Coordinadora de Proyectos de Casa Mater</span> </p>
+  </div>
+</div>
+
+<!-- MAR RAMOS -->
+<div class="about-split">
+  <div class="about-image reveal-img">
+    <img src="/img/mar-ramos.jpg" alt="Mar Ramos" eleventy:ignore>
+  </div>
+
+  <div class="about-text reveal-text">
+    <h1 class="page-title">Mar Ramos</h1>
+    <p class="lead"> 
+      Soy <span class="brand-highlight">Mar Ramos</span>, creadora de Planeta Lactancia y mamá de 3. Soy experta certificada en lactancia, BLW y sueño. Me dedico a acompañar a familias desde la información rigurosa y el respeto a los ritmos del bebé para que puedan tomar decisiones seguras, sin juicios, sin mitos y adaptadas a su propia forma de criar. Realizo consultas a domicilio y online.
+    </p>
+    <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
+  </div>
+
+</div>
+
+<!-- SHEILA SARAIVA -->
+<div class="about-split">
+  <div class="about-image reveal-img">
+    <img src="/img/sheila-saraiva.jpg" alt="Sheila Saraiva" eleventy:ignore>
+  </div>
+
+  <div class="about-text reveal-text">
+    <h1 class="page-title">Sheila Saraiva</h1>
+    <p class="lead">
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    </p>
     <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
   </div>
 
