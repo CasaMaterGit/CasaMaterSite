@@ -12,7 +12,7 @@ layout: layouts/base.njk
     <div class="slider-track">
       {% for slide in slides %}
       <div class="slide">
-        <img src="{{ slide.image }}" alt="{{ slide.title }}" eleventy:ignore>
+        <img src="{{ slide.image | replace('/public', '') }}" alt="{{ slide.title }}" eleventy:ignore>
         <h1 class="hero-title">{{ slide.title }}</h1>
         <h2 class="hero-subtitle">{{ slide.subtitle }}</h2>
       </div>
