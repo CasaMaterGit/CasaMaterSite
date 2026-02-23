@@ -61,6 +61,18 @@ content:
           - { name: text, label: Texto, type: text }
           - { name: image, label: Imagem, type: image }
 
+      - { name: colaboradoras_title, label: Colaboradoras, type: string }
+      - { name: colaboradoras_text, label: Texto Colaboradoras, type: text }
+
+      - name: colaboradoras_title
+        label: Colaboradoras
+        type: object
+        list: true
+        fields:
+          - { name: icon, label: Ícone, type: image }
+          - { name: title, label: Título, type: string }
+  
+  
   # === Contato ===
   - name: contato
     label: Contato
@@ -84,10 +96,7 @@ content:
         label: Corpo do conteúdo
         type: rich-text
 
-
-
-
-  
+ 
   # === Eventos ===
   - name: events
     label: Eventos
