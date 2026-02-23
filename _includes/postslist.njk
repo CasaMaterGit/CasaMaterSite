@@ -9,11 +9,14 @@
             {% if post.data.image %}
               <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
             {% endif %}
-            <h2>{{ post.data.title }}</h2>
+            <div class="blog-content">
+              <h2>{{ post.data.title }}</h2>
+
+              <time class="blog-date" datetime="{{ post.date | htmlDateString }}">
+                {{ post.date | readableDate("dd 'de' LLLL yyyy") }}
+              </time>
+            </div>
           </a>
-          <time class="blog-date" datetime="{{ post.date | htmlDateString }}">
-            {{ post.date | readableDate("dd 'de' LLLL yyyy") }}
-          </time>
           {% if post.data.description %}
             <p class="blog-description">{{ post.data.description }}</p>
           {% endif %}

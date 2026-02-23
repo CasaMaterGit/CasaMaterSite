@@ -25,24 +25,16 @@ eleventyNavigation:
     <h1 class="page-title">Juliana Alves</h1>
     <p class="lead">
       <span class="brand-highlight">Juliana Alves</span> es enfermera, 
-      historiadora y especialista en género.
-      Dedicó 16 años al sistema de salud público construyó una carrera 
-      centrada en la maternidad, los derechos reproductivos y la
-      salud pública. Investiga el parto como experiencia biológica, 
-      cultural y política. Doula y educadora perinatal, acompaña a madres 
-      y promove actividades relacionadas a la maternidad. Trabaja por una
-      justicia reproductiva arraigada en la ciencia y en la sabiduría de
-      los cuerpos y las comunidades, invitándonos a comprender el cuidado 
-      como un acto de dignidad y transformación.
+      historiadora y especialista en género. Dedicó 16 años al sistema de salud público construyó una carrera centrada en la maternidad, los derechos reproductivos y la salud pública. Investiga el parto como experiencia biológica, cultural y política. Doula y educadora perinatal, acompaña a madres y promove actividades relacionadas a la maternidad. Trabaja por una justicia reproductiva arraigada en la ciencia y en la sabiduría de los cuerpos y las comunidades, invitándonos a comprender el cuidado como un acto de dignidad y transformación.
     </p>
-    <p class="founder"> <span class="brand-highlight"> - Fundadora y Coordinadora de Proyectos de Casa Mater</span> </p>
+    <p class="founder"> <span class="brand-highlight"> - Fundadora y Coordinadora de Proyectos <br> de Casa Mater</span> </p>
   </div>
 </div>
 
 <!-- MAR RAMOS -->
 <div class="about-split">
   <div class="about-image reveal-img">
-    <img src="/img/mar-ramos.jpg" alt="Mar Ramos" eleventy:ignore>
+    <img src="/img/mar-ramos.png" alt="Mar Ramos" eleventy:ignore>
   </div>
 
   <div class="about-text reveal-text">
@@ -58,15 +50,13 @@ eleventyNavigation:
 <!-- SHEILA SARAIVA -->
 <div class="about-split">
   <div class="about-image reveal-img">
-    <img src="/img/sheila-saraiva.jpg" alt="Sheila Saraiva" eleventy:ignore>
+    <img src="/img/sheila-saraiva.png" alt="Sheila Saraiva" eleventy:ignore>
   </div>
 
   <div class="about-text reveal-text">
-    <h1 class="page-title">Sheila Saraiva</h1>
+    <h1 class="page-title">Sheila Prado Saraiva</h1>
     <p class="lead">
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      <span class="brand-highlight">Sheila Prado Saraiva </span> es comunicadora con enfoque en el sector social y estrategia de causas. Es también facilitadora de procesos participativos e investigadora en temas de género, migración y desarrollo sostenible. Tiene más de dos década de trabajo  asesorando ongs, fundaciones, gobiernos locales y colectivos en el diseño de estrategias y medologías para fortalecer diferentes causas y lograr participación comunitaria, incidencia, innovación social y el desarrollo territorial. En ámbito de género, ha coordinado proyectos, talleres, laboratorios sociales, estudios y dossiers que enfocan la maternidad, participación ciudadana de las mujeres, empoderamiento, derechos y violencias de género. 
     </p>
     <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
   </div>
@@ -75,11 +65,6 @@ eleventyNavigation:
 
 <!--CASA MATER -->
 <div class="about-split reverse">
-
-<!--<div class="about-image reveal-img">
-    <img src="/img/quem-somos.jpg" alt="Casa Mater" eleventy:ignore>
-  </div> -->
-
   <div class="about-text reveal-text">
 
     <details class="about-accordion">

@@ -94,6 +94,29 @@ layout: layouts/base.njk
   </div>
 </section>
 
+<section id="colaboradores" class="home-section section-white reveal">
+
+  <h2 class="section-title">{{ colaboradoras_title }}</h2>
+
+  <div class="partners-grid">
+    {% for partner in colaboradoras %}
+      <div class="partner-item">
+        <a href="{{ partner.link }}" target="_blank" rel="noopener">
+          <div class="partner-circle">
+            <img 
+              src="{{ partner.image | replace('public/', '/') }}" 
+              alt="{{ partner.name }}" 
+              eleventy:ignore
+            >
+          </div>
+          <h3 class="partner-name">{{ partner.name }}</h3>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector('.slider-track');

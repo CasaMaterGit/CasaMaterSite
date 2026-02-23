@@ -857,12 +857,12 @@ body .actuacion-button .btn-primary:hover {
 
 .nav-link {
 	color: #8f1a5d !important;        
-	text-decoration: none;  /* remove o sublinhado */
-	font-weight: bold;      /* opcional: deixa a palavra mais visível */
+	text-decoration: none;  
+	font-weight: bold;      
 	}
 
 .nav-link:hover {
-	opacity: 0.8;           /* opcional: efeito ao passar o mouse */
+	opacity: 0.8;           
 }
 
 /*=======BLOG==========*/
@@ -874,7 +874,6 @@ body .actuacion-button .btn-primary:hover {
 	margin: 0 auto;
 }
 
-/* card vira linha */
 .blog-card {
 	display: none; /* oculto por padrão */
 	background: none;
@@ -882,21 +881,18 @@ body .actuacion-button .btn-primary:hover {
 	border-radius: 0;
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.08);
+	border-bottom: 1px solid #8f1a5d;
 }
 
-/* mostra apenas os 10 mais recentes */
 .blog-card:nth-child(-n+10) {
 	display: block;
 }
 
-/* remove imagem e descrição */
 .blog-card img,
 .blog-description {
 	display: none;
 }
 
-/* link ocupa a linha inteira */
 .blog-card a {
 	display: flex;
 	align-items: center;
@@ -907,7 +903,6 @@ body .actuacion-button .btn-primary:hover {
 	transition: background-color 0.2s ease;
 }
 
-/* seta > */
 .blog-card a::before {
 	content: "➤";
 	color: #636b2f; /* verde oliva */
@@ -916,7 +911,6 @@ body .actuacion-button .btn-primary:hover {
 	line-height: 1;
 }
 
-/* título */
 .blog-card h2 {
 	margin: 0;
 	color: #636b2f; /* verde oliva */
@@ -934,13 +928,12 @@ body .actuacion-button .btn-primary:hover {
 	color:#8f1a5d;
 }
 
-/* hover de lista */
 .blog-card a:hover {
-	background-color: rgba(99, 107, 47, 0.05);
+	background-color: rgba(45, 212, 128, 0.05);
 }
 
 .post-wrapper img {
-	width: 100%;             /* ocupa toda a largura do wrapper */
+	width: 100%;             
 	border-radius: 16px;     
 	margin-bottom: 1.8rem;   
 	display: block;         
@@ -1435,7 +1428,7 @@ body.nuestros-servicios-y-actividades .page-title {
 }
 
 .contact-page a:hover {
-	color: #8f1a5d; /* cor de destaque ao passar o mouse */
+	color: #8f1a5d; 
 }
 
 /*====VERSION MOBILE===*/
@@ -1448,7 +1441,7 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 
 	main {
-		padding-top: 80px; /* altura real do header */
+		padding-top: 80px; 
 	}
 
 	main, footer {
@@ -1526,8 +1519,8 @@ body.nuestros-servicios-y-actividades .page-title {
 		display: block;
 		padding: 0.5rem 0;
 		font-size: 0.8rem;
-		text-align: center; /* reduz fonte no mobile */
-		line-height: 1;             /* remove espaço fantasma da fonte */
+		text-align: center; 
+		line-height: 1;             
 		padding: 0;
 	}
 }
@@ -1539,7 +1532,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		gap: 1rem;
 		align-items: center;
 		text-align: center;
-		font-size: 1.1rem; /* reduz levemente */
+		font-size: 1.1rem; 
 	}
 
 	.footer-contact .footer-link {
@@ -1556,11 +1549,11 @@ body.nuestros-servicios-y-actividades .page-title {
 @media (max-width: 768px) {
 
 	.hero-slider {
-		margin: 0; /* remove espaço extra */
+		margin: 0; 
 	}
 
 	.slide {
-		height: 55vh;           /* impacto visual sem exagero */
+		height: 55vh;   
 		min-height: 320px;
 		max-height: 500px;
 		padding: 0;
@@ -1569,16 +1562,14 @@ body.nuestros-servicios-y-actividades .page-title {
 	.slide img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;     /* mantém impacto visual */
+		object-fit: cover;  
 		opacity: 0.9;
 	}
 
-	/* overlay um pouco mais leve no mobile */
 	.slide::after {
 		background: rgba(0,0,0,0.3);
 	}
 
-	/* título */
 	.hero-title {
 		top: 50%;
 		left: 50%;
@@ -1589,7 +1580,16 @@ body.nuestros-servicios-y-actividades .page-title {
 		padding: 0 1rem;
 	}
 
-	/* setas */
+	.hero-subtitle {
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 16px;
+		letter-spacing: 0.12em;
+		text-align: center;
+		padding: 0 1rem;
+	}
+
 	.arrow {
 		font-size: 1.8rem;
 		padding: 0.3rem 0.6rem;
@@ -1603,7 +1603,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		right: 0.5rem;
 	}
 
-	/* dots */
 	.dots {
 		bottom: 0.8rem;
 	}
@@ -1634,7 +1633,7 @@ body.nuestros-servicios-y-actividades .page-title {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2rem 0rem; /* menos espaço lateral */
+		padding: 2rem 0rem;
 	}
 
 	.section-vision .vision-overlay {
@@ -1646,7 +1645,7 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 
 	.section-vision .vision-overlay .section-title {
-		font-size: 1.6rem;       /* menor no mobile */
+		font-size: 1.6rem;       
 		margin-bottom: 0.8rem;
 		color: #636b2f;
 		line-height: 1.3;
@@ -1654,11 +1653,11 @@ body.nuestros-servicios-y-actividades .page-title {
 
 	.section-vision .vision-overlay .vision-text {
 		font-family: var(--font-family);
-		font-size: 1.15rem;      /* leitura confortável */
+		font-size: 1.15rem;      
 		line-height: 1.6;
 		text-align: justify;
 		color: #000000;
-		padding: 0 0.2rem;       /* evita colar nas bordas */
+		padding: 0 0.2rem;       
 	}
 
 }
@@ -1666,15 +1665,35 @@ body.nuestros-servicios-y-actividades .page-title {
 /* ===== ATUACION – MOBILE ===== */
 @media (max-width: 768px) {
 	body .actuacion-grid {
-		grid-template-columns: 1fr; /* cada item ocupa toda a largura */
-		gap: 2rem; /* espaçamento entre itens */
+		grid-template-columns: 1fr; 
+		gap: 2rem; 
 	}
 
 	body .actuacion-item {
 		text-align: center;
 	}
+
 	body .actuacion-item .icon-circle {
-		margin: 0 auto 1rem; /* centraliza ícone */
+		margin: 0 auto 1rem; 
+	}
+
+	.section-title-ac {
+	color:#8f1a5d;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	padding-top: 3rem;
+	text-align: center;
+	}
+
+	body .p-actuacion {
+		font-family: var(--font-family);
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0.1rem;
+		padding-right: 0.1rem;
+		text-align: justify;
 	}
 }
 
@@ -1683,6 +1702,7 @@ body.nuestros-servicios-y-actividades .page-title {
 
 	.section-title {
 		padding-top:3rem;
+		padding-bottom: -3rem;
 	}
 
 	.testimonials {
@@ -1756,7 +1776,15 @@ body.nuestros-servicios-y-actividades .page-title {
 		padding-right: 0;             /* opcional, evita margem lateral */
 	}
 
-	/* Opcional: deixar os cards 100% da largura do container */
+	.blog-card h2{
+		text-align: left !important;
+
+	}
+
+	.blog-card a:hover {
+		background-color: rgba(45, 212, 128, 0.05);
+	}
+
 	.event-card {
 		width: 100%;
 		max-width: 100%;
@@ -1778,8 +1806,8 @@ body.nuestros-servicios-y-actividades .page-title {
 
   /* Seções principais */
 	body.quienes-somos .home-section {
-		padding-top: 0.01rem; /* ou 1rem, ajuste fino */
-		padding-bottom: 0.1rem; /* mantém espaçamento inferior */
+		padding-top: 0.01rem; 
+		padding-bottom: 0.1rem; 
 	}
 
 	/* Quote */
@@ -1796,13 +1824,15 @@ body.nuestros-servicios-y-actividades .page-title {
 		line-height: 1.4;
 	}
 
-	/* Split e reverso */
 	body.quienes-somos .about-split {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-		margin-bottom: 4rem;
-		padding: 0 0.1rem;
+		margin-bottom: 3rem;
+		padding: 0;
+		margin-left: -1rem;
+    	margin-right: -1rem;
+		box-sizing: border-box;
 	}
 
 	body.quienes-somos .about-split.reverse {
@@ -1811,13 +1841,15 @@ body.nuestros-servicios-y-actividades .page-title {
 		gap: 2rem;
 		margin-bottom: 4rem;
 		padding: 0 0.1rem;
+		margin-left: -1rem;
+    	margin-right: -1rem;
 	}
 
-	/* Texto principal */
 	body.quienes-somos .about-text {
 		position: relative;
 		padding-left: 1rem;
 		padding-right: 1rem;
+		width: 100%;
 		font-size: 1.05rem;
 		line-height: 1.6;
 		text-align: justify;
@@ -1825,25 +1857,25 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 
 	body.quienes-somos .about-text > .page-title {
-		font-size: 1.2rem;          /* reduz o tamanho do texto */
-		padding: 0.3rem 0.8rem;     /* diminui o padding da caixa */
-		width: auto;                /* largura mínima necessária */
-		max-width: 90%;             /* nunca ultrapassa a tela */
-		top: -1rem;               /* reposiciona para caber na tela */
-		left: -1rem;                 /* alinhamento lateral */
-		border-radius: 20px;        /* mantém arredondado proporcional */
+		font-size: 1.2rem;          
+		padding: 0.3rem 0.8rem;     
+		width: auto;                
+		max-width: 90%;             
+		top: -1rem;               
+		left: -1rem;                 
+		border-radius: 20px;        
 		box-shadow: 0 0px 12px rgba(0,0,0,0.5); /* sombra ainda visível */
 		transform: translateX(30%);
 	}
 
 	body.quienes-somos .about-split.reverse .page-title {
-		font-size: 1rem;          /* reduz o tamanho do texto */
-		padding: 0.3rem 0.8rem;     /* diminui o padding da caixa */
-		width: auto;                /* largura mínima necessária */
-		max-width: 90%;             /* nunca ultrapassa a tela */
-		top: -1rem;               /* reposiciona para caber na tela */
-		left: -1rem;                 /* alinhamento lateral */
-		border-radius: 20px;        /* mantém arredondado proporcional */
+		font-size: 1rem;          
+		padding: 0.3rem 0.8rem;     
+		width: auto;                
+		max-width: 90%;             
+		top: -1rem;               
+		left: -1rem;                 
+		border-radius: 20px;        
 		box-shadow: 0 0px 12px rgba(0,0,0,0.5); /* sombra ainda visível */
 		transform: translateX(19%);
 	}
@@ -1951,7 +1983,6 @@ body.nuestros-servicios-y-actividades .page-title {
 		margin-bottom: 0.1rem;
 	}
 }
-
 
 /* ====== SERVICIOS – MOBILE ======== */
 
