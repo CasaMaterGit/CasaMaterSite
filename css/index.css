@@ -587,8 +587,8 @@ body .actuacion-item p {
 }
 
 body .icon-circle {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	background-color: #8f1a5d; /* cor do círculo */
 	display: flex;

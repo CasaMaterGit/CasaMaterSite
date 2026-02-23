@@ -83,7 +83,7 @@ layout: layouts/base.njk
         <div class="gallery-track">
           {% for g in gallery %}
           <div class="gallery-item">
-            <img src="{{ g.image | replace('/public', '') }}" alt="Galería" eleventy:ignore>
+            <img src="{{ g.image | replace('/public', '') }}" loading="lazy" decoding="async" alt="Galería" eleventy:ignore>
           </div>
           {% endfor %}
         </div>
