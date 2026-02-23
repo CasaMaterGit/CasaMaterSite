@@ -42,7 +42,7 @@ eleventyNavigation:
     <p class="lead"> 
       Soy <span class="brand-highlight">Mar Ramos</span>, creadora de Planeta Lactancia y mamá de 3. Soy experta certificada en lactancia, BLW y sueño. Me dedico a acompañar a familias desde la información rigurosa y el respeto a los ritmos del bebé para que puedan tomar decisiones seguras, sin juicios, sin mitos y adaptadas a su propia forma de criar. Realizo consultas a domicilio y online.
     </p>
-    <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
+    <p class="founder"> <span class="brand-highlight"> - Gestora Técnica de Proyectos</span> </p>
   </div>
 
 </div>
@@ -58,7 +58,7 @@ eleventyNavigation:
     <p class="lead">
       <span class="brand-highlight">Sheila Prado Saraiva </span> es comunicadora con enfoque en el sector social y estrategia de causas. Es también facilitadora de procesos participativos e investigadora en temas de género, migración y desarrollo sostenible. Tiene más de dos década de trabajo  asesorando ongs, fundaciones, gobiernos locales y colectivos en el diseño de estrategias y medologías para fortalecer diferentes causas y lograr participación comunitaria, incidencia, innovación social y el desarrollo territorial. En ámbito de género, ha coordinado proyectos, talleres, laboratorios sociales, estudios y dossiers que enfocan la maternidad, participación ciudadana de las mujeres, empoderamiento, derechos y violencias de género. 
     </p>
-    <p class="founder"> <span class="brand-highlight"> - Fundadora de Casa Mater</span> </p>
+    <p class="founder"> <span class="brand-highlight"> - Comunicación</span> </p>
   </div>
 
 </div>
