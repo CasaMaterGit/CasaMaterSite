@@ -52,6 +52,15 @@ content:
         fields:
           - { name: image, label: Imagem, type: image }
 
+      - name: colaboradoras_title
+        label: Colaboradoras
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nome, type: string }
+          - { name: text, label: Texto, type: text }
+          - { name: image, label: Imagem, type: image }
+
   # === Contato ===
   - name: contato
     label: Contato
@@ -74,6 +83,8 @@ content:
       - name: body
         label: Corpo do conteúdo
         type: rich-text
+
+
 
 
   
