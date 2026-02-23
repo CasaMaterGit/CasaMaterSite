@@ -61,42 +61,42 @@ content:
           - { name: text, label: Texto, type: text }
           - { name: image, label: Imagem, type: image }
 
-  # ===== COLABORADORAS =====
-    - { name: colaboradoras_title, label: Título Colaboradoras, type: string }
-    
-    - name: colaboradoras
-      label: Lista de Colaboradoras
-      type: object
-      list: true
-    
-      fields:
-        - { name: name, label: Nome, type: string }
-        - { name: image, label: Imagem, type: image }
-        - { name: link, label: Link, type: string }
-    
-          
-      # === Contato ===
-      - name: contato
-        label: Contato
-        type: file
-        path: content/contato/index.md
+      # ===== COLABORADORAS =====
+      - { name: colaboradoras_title, label: Título Colaboradoras, type: string }
+      
+      - name: colaboradoras
+        label: Lista de Colaboradoras
+        type: object
+        list: true
+      
         fields:
-          - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+          - { name: name, label: Nome, type: string }
+          - { name: image, label: Imagem, type: image }
+          - { name: link, label: Link, type: string }
+
       
-          - name: title
-            label: Título da página
-            type: string
-      
-          - name: eleventyNavigation
-            label: Navigation
-            type: object
-            fields:
-              - { name: key, label: Key, type: string }
-              - { name: order, label: Order, type: number }
-      
-          - name: body
-            label: Corpo do conteúdo
-            type: rich-text
+  # === Contato ===
+  - name: contato
+    label: Contato
+    type: file
+    path: content/contato/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+  
+      - name: title
+        label: Título da página
+        type: string
+  
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+  
+      - name: body
+        label: Corpo do conteúdo
+        type: rich-text
 
  
   # === Eventos ===
