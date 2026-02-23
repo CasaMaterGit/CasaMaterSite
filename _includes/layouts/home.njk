@@ -103,11 +103,7 @@ layout: layouts/base.njk
       <div class="partner-item">
         <a href="{{ partner.link }}" target="_blank" rel="noopener">
           <div class="partner-circle">
-            <img 
-              src="{{ partner.image | replace('public/', '/') }}" 
-              alt="{{ partner.name }}" 
-              eleventy:ignore
-            >
+            <img src="{{ partner.image | replace('/public', '') }}" alt="{{ partner.name }}" eleventy:ignore>
           </div>
           <h3 class="partner-name">{{ partner.name }}</h3>
         </a>
