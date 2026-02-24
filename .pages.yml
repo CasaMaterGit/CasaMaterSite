@@ -54,7 +54,7 @@ content:
 
       # ===== COLABORADORAS =====
       - { name: colaboradoras_title, label: Título Colaboradoras, type: string }
-      - { name: colaboradoras_text, label: Texto Colaboradoras, type: string }
+      - { name: colaboradoras_text, label: Texto Colaboradoras, type: rich-text}
 
       - name: colaboradoras
         label: Lista de Colaboradoras
