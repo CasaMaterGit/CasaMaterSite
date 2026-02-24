@@ -96,7 +96,6 @@ layout: layouts/base.njk
 
 <!-- ===== COLABORADORAS ===== -->
 <section id="colaboradores" class="home-section section-white reveal">
-
   <h2 class="section-title">{{ colaboradoras_title }}</h2>
   
   <div class="partners-grid">
@@ -111,9 +110,12 @@ layout: layouts/base.njk
       </div>
     {% endfor %}
   </div>
-  {% for paragraph in colaboradoras_text %}
-    <p class="p-colaboradoras">{{ paragraph }}</p>
-  {% endfor %}  
+
+  {% if colaboradoras_text %}
+    {% for paragraph in colaboradoras_text.split('\n\n') %}
+      <p class="p-colaboradoras">{{ paragraph }}</p>
+    {% endfor %}
+  {% endif %}
 
 </section>
 

@@ -745,6 +745,12 @@ body .actuacion-button .btn-primary:hover {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	max-width: 1200px;
+} 
+
+
+#colaboradores .p-colaboradoras {
+	text-align: justify;
+	font-size: 1.1rem;
 }
 
 #colaboradores .section-title {
@@ -805,11 +811,7 @@ body .actuacion-button .btn-primary:hover {
 	color: #b44388;
 }
 
-#colaboradores .p-colaboradoras {
-	color: black;
-	text-align: justify;
-	font-size: 1.3rem;
-}
+
 /* ===== BLOG POSTS ===== */
 
 .post-wrapper {
