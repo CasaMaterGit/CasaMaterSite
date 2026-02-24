@@ -119,9 +119,11 @@ content:
       - { name: description, label: Description, type: string }
       - { name: date, label: Date, type: date }
       - { name: image, label: Image, type: image } 
+      - { name: imageSource, label: Image Source, type: string }
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
+
 
   # === Metadata (site-wide) ===
   - name: metadata

@@ -56,7 +56,7 @@ eleventyNavigation:
   <div class="about-text reveal-text">
     <h1 class="page-title">Sheila Prado Saraiva</h1>
     <p class="lead">
-      <span class="brand-highlight">Sheila Prado Saraiva </span> es comunicadora con enfoque en el sector social y estrategia de causas. Es también facilitadora de procesos participativos e investigadora en temas de género, migración y desarrollo sostenible. Tiene más de dos década de trabajo  asesorando ongs, fundaciones, gobiernos locales y colectivos en el diseño de estrategias y medologías para fortalecer diferentes causas y lograr participación comunitaria, incidencia, innovación social y el desarrollo territorial. En ámbito de género, ha coordinado proyectos, talleres, laboratorios sociales, estudios y dossiers que enfocan la maternidad, participación ciudadana de las mujeres, empoderamiento, derechos y violencias de género. 
+      <span class="brand-highlight">Sheila Prado Saraiva </span> es comunicadora, facilitadora de procesos participativos e investigadora en temas de género, migración y desarrollo sostenible. Asesora a ONG, fundaciones, gobiernos locales y colectivos en el diseño de estrategias y metodologías orientadas al fortalecimiento de causas sociales, la participación comunitaria, la innovación social y el desarrollo local. En el ámbito de género, ha coordinado proyectos, laboratorios sociales y estudios centrados en maternidad, feminismos, participación y liderazgo de las mujeres, así como en la prevención y abordaje de las violencias de género.
     </p>
     <p class="founder"> <span class="brand-highlight"> - Comunicación</span> </p>
   </div>

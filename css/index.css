@@ -748,7 +748,7 @@ body .actuacion-button .btn-primary:hover {
 } 
 
 
-#colaboradores .p-colaboradoras {
+.p-colaboradoras {
 	text-align: justify;
 	font-size: 1.1rem;
 }

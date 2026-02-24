@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 hideTitle: true
+imageSource: ""
 ---
 <section class="home-section reveal">
   <div class="content post-wrapper">
@@ -13,6 +14,11 @@ hideTitle: true
 
     {% if image %}
       <img src="{{ image | replace('/public', '') }}" alt="{{ title }}" class="event-image" eleventy:ignore>
+    {% endif %}
+    {% if imageSource %}
+      <p class="image-source">
+        {{ imageSource }}
+      </p>
     {% endif %}
 
     <article class="post-content">
