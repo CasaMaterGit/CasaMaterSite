@@ -94,12 +94,13 @@ layout: layouts/base.njk
   </div>
 </section>
 
+<!-- ===== COLABORADORAS ===== -->
 <section id="colaboradores" class="home-section section-white reveal">
 
   <h2 class="section-title">{{ colaboradoras_title }}</h2>
-
+  
   <div class="partners-grid">
-    {% for partner in colaboradoras %}
+    {% for partner in colaboradoras %}     
       <div class="partner-item">
         <a href="{{ partner.link }}" target="_blank" rel="noopener">
           <div class="partner-circle">
@@ -110,6 +111,9 @@ layout: layouts/base.njk
       </div>
     {% endfor %}
   </div>
+  {% for paragraph in colaboradoras_text %}
+    <p class="p-colaboradoras">{{ paragraph }}</p>
+  {% endfor %}  
 
 </section>
 

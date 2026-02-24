@@ -805,6 +805,11 @@ body .actuacion-button .btn-primary:hover {
 	color: #b44388;
 }
 
+#colaboradores .p-colaboradoras {
+	color: black;
+	text-align: justify;
+	font-size: 1.3rem;
+}
 /* ===== BLOG POSTS ===== */
 
 .post-wrapper {
@@ -1754,7 +1759,7 @@ body.nuestros-servicios-y-actividades .page-title {
 
 @media (max-width: 500px) {
 	#colaboradores .partners-grid {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);	
 	}
 }
 
