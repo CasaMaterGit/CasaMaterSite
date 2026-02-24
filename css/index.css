@@ -946,6 +946,10 @@ body .actuacion-button .btn-primary:hover {
 	display: block;         
 }
 
+.image-source {
+	text-align: right;
+}
+
 /* ===== EVENTOS ===== */
 
 /* Página do evento */
