@@ -5,7 +5,7 @@ eleventyNavigation:
   key: Contacto
   order: 6
 ---
-# contamos
+# Contacto
 
 **¡Entre en contacto!**  
 Escríbenos: [casa\_mater22@gmail.com](mailto:casa_mater22@gmail.com)  
