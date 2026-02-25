@@ -26,7 +26,7 @@ content:
       - { name: actuacion_text, label: Texto Atuación, type: text }
 
       - name: actuacion
-        label: Itens de Atuación 
+        label: Itens de Atuación (NÃO adicionar mais que 3)
         type: object
         list: true
         fields:
