@@ -1,3 +1,5 @@
+# ====================== NUNCA MODIFICAR ESTE DOCUMENTO ===============================
+
 media: public/img
 
 content:
@@ -66,6 +68,7 @@ content:
           - { name: image, label: Imagem, type: image }
           - { name: link, label: Link, type: string }
 
+      # ===== NAVEGAÇÃO =====
       - name: eleventyNavigation
         label: Navegação (Ordem que aparece no Menu)
         type: object
@@ -84,13 +87,6 @@ content:
       - name: title
         label: Título da página
         type: string
-  
-      - name: eleventyNavigation
-        label: Navigation
-        type: object
-        fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
   
       - name: body
         label: Corpo do conteúdo
@@ -119,13 +115,6 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
-      - name: eleventyNavigation
-        label: Navegação (Ordem que aparece no Menu)
-        type: object
-        fields:
-          - { name: key, label: Navigation Key, type: string }
-          - { name: order, label: Ordem, type: number }
-
   # === Blog ===
   - name: posts
     label: Posts
@@ -142,13 +131,6 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
-
-      - name: eleventyNavigation
-        label: Navegação (Ordem que aparece no Menu)
-        type: object
-        fields:
-          - { name: key, label: Navigation Key, type: string }
-          - { name: order, label: Ordem, type: number }
 
   # === Metadata (site-wide) ===
   - name: metadata
