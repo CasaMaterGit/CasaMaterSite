@@ -1,11 +1,11 @@
 ---
 layout: layouts/base.njk
 title: Contacto
+pageClass: contact-page
 eleventyNavigation:
   key: Contacto
   order: 6
 ---
-# Contacto
 
 **¡Entre en contacto!**  
 Escríbenos: [casa\_mater22@gmail.com](mailto:casa_mater22@gmail.com)  

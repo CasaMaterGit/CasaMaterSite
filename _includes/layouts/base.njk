@@ -88,11 +88,10 @@
 
       {# PÁGINAS GERAIS#}
       {% if content %}
- 
         {% if title == "Nuestros Servicios y Actividades" %}
           {{ content | safe }}
         {% else %}
-          <section class="home-section reveal">
+          <section class="home-section reveal {{ pageClass }}">
             <div class="content">
 
               {% if title and title != "Home" and not hideTitle %}
