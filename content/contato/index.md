@@ -1,15 +1,12 @@
 ---
 layout: layouts/base.njk
 title: Contacto
-hideTitle: true
 eleventyNavigation:
   key: Contacto
   order: 6
 ---
-<h1 class = "h1"> Contacto</h1>
+# contamos
 
-<div class="contact-page">
-  <p> <strong>¡Entre en contacto!</strong><br>            
-    Escríbenos: <a href="mailto:casa_mater22@gmail.com">casa_mater22@gmail.com</a><br>
-    Síguenos en Instagram: <a href="https://www.instagram.com/casa_mater/" target="_blank">@casa_mater<a><br>
-  </p>
+**¡Entre en contacto!**  
+Escríbenos: [casa\_mater22@gmail.com](mailto:casa_mater22@gmail.com)  
+Síguenos en Instagram: [@casa\_mater](https://www.instagram.com/casa_mater/)
