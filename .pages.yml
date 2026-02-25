@@ -24,11 +24,11 @@ content:
       - { name: actuacion_text, label: Texto Atuación, type: text }
 
       - name: actuacion
-        label: Itens de Atuación
+        label: Itens de Atuación 
         type: object
         list: true
         fields:
-          - { name: icon, label: Ícone, type: image }
+          - { name: icon, label: Ícone (*Imagem precisa ser circular), type: image }
           - { name: title, label: Título, type: string }
 
       # ===== VISIÓN =====
@@ -50,7 +50,7 @@ content:
         type: object
         list: true
         fields:
-          - { name: image, label: Imagem, type: image }
+          - { name: image, label: Imagem (Imagem precisa ter menos que 5MB), type: image }
 
       # ===== COLABORADORAS =====
       - { name: colaboradoras_title, label: Título Colaboradoras, type: string }
@@ -67,7 +67,7 @@ content:
           - { name: link, label: Link, type: string }
 
       - name: eleventyNavigation
-        label: Navegação (NÃO ALTERAR)
+        label: Navegação (Ordem que aparece no Menu)
         type: object
         fields:
           - { name: key, label: Navigation Key, type: string }
@@ -96,6 +96,12 @@ content:
         label: Corpo do conteúdo
         type: rich-text
 
+      - name: eleventyNavigation
+        label: Navegação (Ordem que aparece no Menu)
+        type: object
+        fields:
+          - { name: key, label: Navigation Key, type: string }
+          - { name: order, label: Ordem, type: number }
 
   # === Eventos ===
   - name: events
@@ -113,6 +119,12 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
+      - name: eleventyNavigation
+        label: Navegação (Ordem que aparece no Menu)
+        type: object
+        fields:
+          - { name: key, label: Navigation Key, type: string }
+          - { name: order, label: Ordem, type: number }
 
   # === Blog ===
   - name: posts
@@ -131,6 +143,12 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
 
+      - name: eleventyNavigation
+        label: Navegação (Ordem que aparece no Menu)
+        type: object
+        fields:
+          - { name: key, label: Navigation Key, type: string }
+          - { name: order, label: Ordem, type: number }
 
   # === Metadata (site-wide) ===
   - name: metadata
