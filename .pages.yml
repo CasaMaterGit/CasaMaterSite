@@ -39,7 +39,7 @@ content:
 
       # ===== TESTIMONIOS =====
       - name: testimonials
-        label: Testimonios
+        label: Testimonios (NÃO adicionar mais que 5)
         type: object
         list: true
         fields:
