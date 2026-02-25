@@ -83,7 +83,8 @@ content:
     path: content/contato/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-  
+      - { name: pageClass, type: string, hidden: true, default: contact-page }
+
       - name: title
         label: Título da página
         type: string
