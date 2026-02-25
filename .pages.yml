@@ -66,6 +66,12 @@ content:
           - { name: image, label: Imagem, type: image }
           - { name: link, label: Link, type: string }
 
+      - name: eleventyNavigation
+        label: Navegação (NÃO ALTERAR)
+        type: object
+        fields:
+          - { name: key, label: Navigation Key, type: string }
+          - { name: order, label: Ordem, type: number }
       
   # === Contato ===
   - name: contato
