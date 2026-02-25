@@ -633,9 +633,9 @@ body .actuacion-button .btn-primary:hover {
 
 /* grid de depoimentos */
 .testimonials {
-	display: grid;
-	justify-items: center;
-	grid-template-columns: repeat(5, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* centraliza a linha */
 	gap: 1.5rem;
 }
 
@@ -646,7 +646,7 @@ body .actuacion-button .btn-primary:hover {
 	padding: 1.5rem;
 	border-radius: 8px;
 	text-align: justify;
-
+	flex: 0 0 calc((100% - 6rem) / 5);
 }
 
 .testimonial h3 {
@@ -751,7 +751,7 @@ body .actuacion-button .btn-primary:hover {
 
 .p-colaboradoras {
 	text-align: justify;
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 
 #colaboradores .section-title {
