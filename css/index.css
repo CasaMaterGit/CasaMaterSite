@@ -634,6 +634,7 @@ body .actuacion-button .btn-primary:hover {
 /* grid de depoimentos */
 .testimonials {
 	display: grid;
+	justify-items: center;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 1.5rem;
 }
