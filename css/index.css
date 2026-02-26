@@ -208,6 +208,18 @@ code {
 	font-size: 1.3rem;
 }
 
+.legal{
+	font-size: 12px;
+	text-align: center;
+	color: black;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.legal .footer-link:hover {
+	color: #8f1a5d;
+}
+
 .site-footer {
 	background-color: rgba(231, 214, 196, 0.2);
 }
