@@ -220,6 +220,10 @@ code {
 	color: #8f1a5d;
 }
 
+.legal-content p{
+	text-align: justify;
+}
+
 .site-footer {
 	background-color: rgba(231, 214, 196, 0.2);
 }
