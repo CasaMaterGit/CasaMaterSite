@@ -1718,15 +1718,13 @@ body.nuestros-servicios-y-actividades .page-title {
 	}
 
 	.testimonials {
-		grid-template-columns: 1fr; /* um depoimento por linha */
+		flex-direction: column; 
 		gap: 2rem;
 	}
 
 	.testimonial {
-		padding: 1.5rem;
-		border: 1px solid #ddd;
-		border-radius: 10px;
-		background-color: #636b2f;
+		flex: 0 0 100%;   
+		max-width: 100%;
 	}
 }
 
